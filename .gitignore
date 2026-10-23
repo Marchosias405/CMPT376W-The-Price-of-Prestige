@@ -41,3 +41,15 @@ id_ed25519
 
 # Intentionally tracked: submission HTML/PDF, original handoff ZIP/PDF,
 # editable source/CSS, pinned runtime, licences, SVG diagrams and test reports.
+
+# Codex handoff and generated review files
+01_Design/CMPT376W_Group15_Codex_Handoff.zip
+work/Group15_Review_Project/reference_packet/
+work/Group15_Review_Project/review/*-results.json
+work/Group15_Review_Project/review/environment.json
+work/Group15_Review_Project/review/MANIFEST.sha256
+
+# Temporary development files
+node_modules/
+__pycache__/
+*.pyc

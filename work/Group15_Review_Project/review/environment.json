@@ -1,9 +1,0 @@
-{
-  "python": "3.12.14",
-  "reportlab": "4.4.9",
-  "pypdf": "6.10.0",
-  "node": "22.11.0",
-  "harlowe": "3.3.9",
-  "playwright": "1.62.1",
-  "browser": "Microsoft Edge 155.0.4283.62"
-}
