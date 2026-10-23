@@ -1,0 +1,9 @@
+{
+  "import": "PASS: official Twine editor accepted the HTML as one story with 26 passages",
+  "export": "PASS: Publish to File generated playable HTML",
+  "compare": "PASS: all passage texts, tags, stylesheet, IFID and Harlowe version match the canonical build",
+  "offlineExportPlay": "PASS: exported file loads Intro and advances to Offer without Harlowe or browser errors",
+  "format": "3.3.9",
+  "editor": "Official deployed Twine web assets downloaded 2026-10-23; isolated local origin and fresh browser context; no existing user stories",
+  "editorAsset": "index-BhufTn3L.js"
+}

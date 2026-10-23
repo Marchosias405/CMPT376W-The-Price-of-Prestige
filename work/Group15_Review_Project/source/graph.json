@@ -1,0 +1,327 @@
+{
+  "passages": [
+    {
+      "name": "Intro",
+      "tags": "intro",
+      "position": "500,50",
+      "size": "100,100"
+    },
+    {
+      "name": "Offer",
+      "tags": "scene",
+      "position": "500,200"
+    },
+    {
+      "name": "Outburst",
+      "tags": "decision stage-first tone-risk",
+      "position": "500,350"
+    },
+    {
+      "name": "Jean",
+      "tags": "consequence tone-risk",
+      "position": "200,500"
+    },
+    {
+      "name": "Record",
+      "tags": "consequence tone-support",
+      "position": "500,500"
+    },
+    {
+      "name": "Quiet",
+      "tags": "consequence tone-caution",
+      "position": "800,500"
+    },
+    {
+      "name": "Defect",
+      "tags": "decision stage-defect tone-caution",
+      "position": "500,680"
+    },
+    {
+      "name": "Pair",
+      "tags": "consequence tone-support",
+      "position": "200,850"
+    },
+    {
+      "name": "Solo",
+      "tags": "consequence tone-risk",
+      "position": "500,850"
+    },
+    {
+      "name": "Open",
+      "tags": "consequence tone-caution",
+      "position": "800,850"
+    },
+    {
+      "name": "Credit",
+      "tags": "decision stage-credit tone-risk",
+      "position": "500,1030"
+    },
+    {
+      "name": "Challenge",
+      "tags": "consequence tone-caution",
+      "position": "200,1200"
+    },
+    {
+      "name": "Support",
+      "tags": "consequence tone-support",
+      "position": "500,1200"
+    },
+    {
+      "name": "Accept",
+      "tags": "consequence tone-caution",
+      "position": "800,1200"
+    },
+    {
+      "name": "Debrief",
+      "tags": "scene",
+      "position": "500,1400"
+    },
+    {
+      "name": "Options",
+      "tags": "decision stage-future tone-caution",
+      "position": "500,1580"
+    },
+    {
+      "name": "Report",
+      "tags": "response tone-caution",
+      "position": "50,1780"
+    },
+    {
+      "name": "Exit",
+      "tags": "response tone-support",
+      "position": "350,1780"
+    },
+    {
+      "name": "Peers",
+      "tags": "response tone-support",
+      "position": "650,1780"
+    },
+    {
+      "name": "Silence",
+      "tags": "response tone-risk",
+      "position": "950,1780"
+    },
+    {
+      "name": "E1",
+      "tags": "ending outcome-good",
+      "position": "50,2030"
+    },
+    {
+      "name": "E2",
+      "tags": "ending outcome-mixed",
+      "position": "250,2030"
+    },
+    {
+      "name": "E3",
+      "tags": "ending outcome-safe",
+      "position": "500,2030"
+    },
+    {
+      "name": "E4",
+      "tags": "ending outcome-progress",
+      "position": "750,2030"
+    },
+    {
+      "name": "E5",
+      "tags": "ending outcome-cost",
+      "position": "1000,2030"
+    },
+    {
+      "name": "Frame",
+      "tags": "header",
+      "position": "1200,50"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Intro",
+      "to": "Offer",
+      "label": "Begin Diane's first week"
+    },
+    {
+      "from": "Offer",
+      "to": "Outburst",
+      "label": "Join the next lab review"
+    },
+    {
+      "from": "Outburst",
+      "to": "Jean",
+      "label": "Ask Jean to intervene"
+    },
+    {
+      "from": "Outburst",
+      "to": "Record",
+      "label": "Write a factual record while it is fresh"
+    },
+    {
+      "from": "Outburst",
+      "to": "Quiet",
+      "label": "Stay quiet for now and protect my position"
+    },
+    {
+      "from": "Jean",
+      "to": "Defect",
+      "label": "Return to the milestone work"
+    },
+    {
+      "from": "Record",
+      "to": "Defect",
+      "label": "Return to the milestone work"
+    },
+    {
+      "from": "Quiet",
+      "to": "Defect",
+      "label": "Return to the milestone work"
+    },
+    {
+      "from": "Defect",
+      "to": "Pair",
+      "label": "Ask Eli to review and test a fix together"
+    },
+    {
+      "from": "Defect",
+      "to": "Solo",
+      "label": "Attempt a rushed repair alone"
+    },
+    {
+      "from": "Defect",
+      "to": "Open",
+      "label": "Raise the defect in the team review"
+    },
+    {
+      "from": "Pair",
+      "to": "Credit",
+      "label": "Read the manuscript draft"
+    },
+    {
+      "from": "Solo",
+      "to": "Credit",
+      "label": "Read the manuscript draft"
+    },
+    {
+      "from": "Open",
+      "to": "Credit",
+      "label": "Read the manuscript draft"
+    },
+    {
+      "from": "Credit",
+      "to": "Challenge",
+      "label": "Challenge the decision with contribution records"
+    },
+    {
+      "from": "Credit",
+      "to": "Support",
+      "label": "Talk privately with Eli about support and consent"
+    },
+    {
+      "from": "Credit",
+      "to": "Accept",
+      "label": "Accept the decision for now to avoid another confrontation"
+    },
+    {
+      "from": "Challenge",
+      "to": "Debrief",
+      "label": "Consider what comes next"
+    },
+    {
+      "from": "Support",
+      "to": "Debrief",
+      "label": "Respect his boundary and consider next steps"
+    },
+    {
+      "from": "Support",
+      "to": "Debrief",
+      "label": "state-setting choice"
+    },
+    {
+      "from": "Support",
+      "to": "Debrief",
+      "label": "state-setting choice"
+    },
+    {
+      "from": "Accept",
+      "to": "Debrief",
+      "label": "Consider what comes next"
+    },
+    {
+      "from": "Debrief",
+      "to": "Options",
+      "label": "Hear Priya's options"
+    },
+    {
+      "from": "Options",
+      "to": "Report",
+      "label": "File a factual formal report"
+    },
+    {
+      "from": "Options",
+      "to": "Exit",
+      "label": "Request a transfer and plan a safer exit"
+    },
+    {
+      "from": "Options",
+      "to": "Peers",
+      "label": "Stay and build safer peer practices"
+    },
+    {
+      "from": "Options",
+      "to": "Silence",
+      "label": "Keep working without further action"
+    },
+    {
+      "from": "Report",
+      "to": "E1",
+      "label": "Follow the review over the next six weeks"
+    },
+    {
+      "from": "Report",
+      "to": "E2",
+      "label": "Follow the review over the next six weeks"
+    },
+    {
+      "from": "Exit",
+      "to": "E3",
+      "label": "state-setting choice"
+    },
+    {
+      "from": "Exit",
+      "to": "E3",
+      "label": "state-setting choice"
+    },
+    {
+      "from": "Peers",
+      "to": "E4",
+      "label": "See what changes after one month"
+    },
+    {
+      "from": "Silence",
+      "to": "E5",
+      "label": "Watch the sponsor presentation"
+    },
+    {
+      "from": "E1",
+      "to": "Intro",
+      "label": "fresh restart"
+    },
+    {
+      "from": "E2",
+      "to": "Intro",
+      "label": "fresh restart"
+    },
+    {
+      "from": "E3",
+      "to": "Intro",
+      "label": "fresh restart"
+    },
+    {
+      "from": "E4",
+      "to": "Intro",
+      "label": "fresh restart"
+    },
+    {
+      "from": "E5",
+      "to": "Intro",
+      "label": "fresh restart"
+    }
+  ]
+}

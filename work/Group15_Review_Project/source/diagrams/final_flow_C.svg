@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="504" height="440" preserveAspectRatio="xMinYMin meet" viewBox="0 0 504 440" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="504" height="440"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-440)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="137" y="405" width="230" height="35" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="159.97050000000002" y="419.5" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,839) scale(1,-1)">Options | choose the longer-term response</text>
+			<rect x="0" y="326" width="114" height="42" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="43.3065" y="349.75" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,699) scale(1,-1)">Report</text>
+			<text x="24.168749999999996" y="338.25" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,676) scale(1,-1)">File factual report</text>
+			<path d="M 252,405 L 252,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,386.5 L 57,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 57,386.5 L 57,368 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="57 368, 54.6 373, 59.4 373" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="130" y="326" width="114" height="42" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="179.2055" y="349.75" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,699) scale(1,-1)">Exit</text>
+			<text x="159.36225" y="338.25" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,676) scale(1,-1)">Plan a transfer</text>
+			<path d="M 252,405 L 252,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,386.5 L 187,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 187,386.5 L 187,368 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="187 368, 184.6 373, 189.4 373" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="260" y="326" width="114" height="42" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="305.423" y="349.75" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,699) scale(1,-1)">Peers</text>
+			<text x="279.68075" y="338.25" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,676) scale(1,-1)">Build peer practices</text>
+			<path d="M 252,405 L 252,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,386.5 L 317,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 317,386.5 L 317,368 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="317 368, 314.6 373, 319.4 373" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="390" y="326" width="114" height="42" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="432.1165" y="349.75" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,699) scale(1,-1)">Silence</text>
+			<text x="415.584" y="338.25" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,676) scale(1,-1)">No further action</text>
+			<path d="M 252,405 L 252,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,386.5 L 447,386.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 447,386.5 L 447,368 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="447 368, 444.6 373, 449.4 373" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="0" y="161" width="92" height="55" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,95%,87%); fill-rule: evenodd;"/>
+			<text x="40.8634" y="196.9" style="font-family: Helvetica-Bold; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,393) scale(1,-1)">E1</text>
+			<text x="20.090199999999996" y="185.5" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,371) scale(1,-1)">Accountability</text>
+			<text x="33.6268" y="174.1" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,348) scale(1,-1)">begins</text>
+			<rect x="103" y="161" width="92" height="55" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,95%,87%); fill-rule: evenodd;"/>
+			<text x="143.8634" y="191.2" style="font-family: Helvetica-Bold; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,382) scale(1,-1)">E2</text>
+			<text x="113.5226" y="179.79999999999998" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,359) scale(1,-1)">Review unresolved</text>
+			<rect x="206" y="161" width="92" height="55" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,95%,87%); fill-rule: evenodd;"/>
+			<text x="246.8634" y="191.2" style="font-family: Helvetica-Bold; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,382) scale(1,-1)">E3</text>
+			<text x="230.9916" y="179.79999999999998" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,359) scale(1,-1)">A safer exit</text>
+			<rect x="309" y="161" width="92" height="55" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,95%,87%); fill-rule: evenodd;"/>
+			<text x="349.8634" y="191.2" style="font-family: Helvetica-Bold; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,382) scale(1,-1)">E4</text>
+			<text x="327.4564" y="179.79999999999998" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,359) scale(1,-1)">Local progress</text>
+			<rect x="412" y="161" width="92" height="55" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(100%,95%,87%); fill-rule: evenodd;"/>
+			<text x="452.8634" y="191.2" style="font-family: Helvetica-Bold; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,382) scale(1,-1)">E5</text>
+			<text x="421.1198" y="179.79999999999998" style="font-family: Helvetica; font-size: 8.4px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,359) scale(1,-1)">Success with a cost</text>
+			<path d="M 57,326 L 57,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 57,271 L 46,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 46,271 L 46,216 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="46 216, 43.6 221, 48.4 221" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 57,326 L 57,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 57,271 L 149,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 149,271 L 149,216 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="149 216, 146.6 221, 151.4 221" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 187,326 L 187,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 187,271 L 252,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,271 L 252,216 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 216, 249.6 221, 254.4 221" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 317,326 L 317,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 317,271 L 355,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 355,271 L 355,216 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="355 216, 352.6 221, 357.4 221" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 447,326 L 447,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 447,271 L 458,271 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 458,271 L 458,216 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="458 216, 455.6 221, 460.4 221" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<rect x="137" y="47" width="230" height="38" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
+			<text x="176.18" y="68.75" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,137) scale(1,-1)">Intro | fresh restart from every ending</text>
+			<text x="182.572" y="57.25" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,114) scale(1,-1)">Harlowe (restart:) clears story history</text>
+			<path d="M 46,161 L 46,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 46,123 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,85 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 85, 249.6 90, 254.4 90" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 149,161 L 149,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 149,123 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,85 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 85, 249.6 90, 254.4 90" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 252,161 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,85 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 85, 249.6 90, 254.4 90" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 355,161 L 355,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 355,123 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,85 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 85, 249.6 90, 254.4 90" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+			<path d="M 458,161 L 458,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 458,123 L 252,123 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<path d="M 252,123 L 252,85 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
+			<polygon points="252 85, 249.6 90, 254.4 90" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

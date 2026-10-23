@@ -1,0 +1,67 @@
+flowchart TD
+  Intro["Intro"]
+  Offer["Offer"]
+  Outburst["Outburst"]
+  Jean["Jean"]
+  Record["Record"]
+  Quiet["Quiet"]
+  Defect["Defect"]
+  Pair["Pair"]
+  Solo["Solo"]
+  Open["Open"]
+  Credit["Credit"]
+  Challenge["Challenge"]
+  Support["Support"]
+  Accept["Accept"]
+  Debrief["Debrief"]
+  Options["Options"]
+  Report["Report"]
+  Exit["Exit"]
+  Peers["Peers"]
+  Silence["Silence"]
+  E1["E1"]
+  E2["E2"]
+  E3["E3"]
+  E4["E4"]
+  E5["E5"]
+  Intro -->|"Begin Diane's first week"| Offer
+  Offer -->|"Join the next lab review"| Outburst
+  Outburst -->|"Ask Jean to intervene"| Jean
+  Outburst -->|"Write a factual record while it is fresh"| Record
+  Outburst -->|"Stay quiet for now and protect my position"| Quiet
+  Jean -->|"Return to the milestone work"| Defect
+  Record -->|"Return to the milestone work"| Defect
+  Quiet -->|"Return to the milestone work"| Defect
+  Defect -->|"Ask Eli to review and test a fix together"| Pair
+  Defect -->|"Attempt a rushed repair alone"| Solo
+  Defect -->|"Raise the defect in the team review"| Open
+  Pair -->|"Read the manuscript draft"| Credit
+  Solo -->|"Read the manuscript draft"| Credit
+  Open -->|"Read the manuscript draft"| Credit
+  Credit -->|"Challenge the decision with contribution records"| Challenge
+  Credit -->|"Talk privately with Eli about support and consent"| Support
+  Credit -->|"Accept the decision for now to avoid another confrontation"| Accept
+  Challenge -->|"Consider what comes next"| Debrief
+  Support -->|"if not pair: respect refusal; consent=false"| Debrief
+  Support -->|"if pair: accept scoped statement; consent=true"| Debrief
+  Support -->|"if pair: keep statement private; consent=false"| Debrief
+  Accept -->|"Consider what comes next"| Debrief
+  Debrief -->|"Hear Priya's options"| Options
+  Options -->|"File a factual formal report"| Report
+  Options -->|"Request a transfer and plan a safer exit"| Exit
+  Options -->|"Stay and build safer peer practices"| Peers
+  Options -->|"Keep working without further action"| Silence
+  Report -->|"if documented AND challenged, OR consent"| E1
+  Report -->|"otherwise"| E2
+  Exit -->|"leave factual exit account; exitAccount=true"| E3
+  Exit -->|"no exit account; exitAccount=false"| E3
+  Peers -->|"See what changes after one month"| E4
+  Silence -->|"Watch the sponsor presentation"| E5
+  E1 -->|"fresh restart"| Intro
+  E2 -->|"fresh restart"| Intro
+  E3 -->|"fresh restart"| Intro
+  E4 -->|"fresh restart"| Intro
+  E5 -->|"fresh restart"| Intro
+  %% Support: after Pair, accept named statement or keep private; otherwise respect refusal.
+  %% Exit: choose factual exit account true or false before E3.
+  %% Frame is an automatically rendered header, not a navigable story node.

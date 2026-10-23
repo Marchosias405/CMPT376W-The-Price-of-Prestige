@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "compiledPassages": 26,
+  "playableReachablePassages": 25,
+  "uniqueGraphEdges": 35,
+  "linkOccurrencesIncludingRestart": 38,
+  "stateVariablesInitialized": [
+    "challenged",
+    "consent",
+    "credit",
+    "documented",
+    "exitAccount",
+    "first",
+    "repair",
+    "supported"
+  ],
+  "conditionalIfBlocks": 24,
+  "externalResourceTags": [],
+  "htmlSha256": "d6da560bd305a60abc471911a881d2e30c3c72ff88142da4fd58fa469c1ce257",
+  "notes": [
+    "Static graph reachability is supplemented by actual exhaustive browser routes.",
+    "Ordinary ACM anchor is allowed and requires internet only if opened."
+  ]
+}

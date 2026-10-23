@@ -1,0 +1,86 @@
+=== START ===
+You are a student about to graduate. You are offered a full-time position on a very prestigious industry research team, developing cutting-edge AR technology after 2 rounds of interviews.
+
+[takeJOB]
+
+[takeJOB] You decided to take a job. You begin working with the team. Your boss, Max, is very famous in Augmented Reality (AR) research and is an industry-leading professional. He was actually one of the reasons you wanted to take this job. After working side by side for a couple of weeks, you find out he is prone to anger over the most minor of mistakes, and verbally abuses you and personally attacks you for a simple mistake.
+
+You are slightly concerned about how you would continue to work together in the future:
+
+Option1: [Take this to management 1]
+Option2: [Decide to be quiet and continue to work]
+
+[Take this to management 1]: You decided to talk to the director (Jean) overseeing this team about this issue. However, Jean said that Max is the best in the industry, and she doesn't want to anger Max. Jean said to you: “Deal with it, and don’t be a kid”
+
+Option1: [Quit 1]
+Option2: [continue to work1]
+
+[Quit 1]: You quit the team after realizing the workplace is very demeaning. You begin finding a new job.
+Option1: [Move on and try to find a job]
+
+[Decide to be quiet and continue to work], [continue to work1]: You were annoyed by the team manager’s response, but you decided to continue to work as before.
+
+Option1: [continue1]
+
+[continue1]: You notice a bug in the code. You can fix it by yourself, or ask for help fixing it and risk getting whoever introduced the bug in trouble
+
+[Attempts to fix it by yourself]
+[Ask for help]
+
+[Attempts to fix it by yourself]: You fixed the bug but Max noticed it introduced a series of new bugs in its place that caused the demo you were working on to completely crash. Due to this, Max ruled out your appearance on stage with the rest of the team and is subjected to a tirade from Max for failing to fix the bug properly along with the person who introduced the bug to begin with and as a final punishment for you. Max also removed your name from the journal manuscript that the team published after this demo.
+
+Option1: [Take this to management 2]
+Option2: [continue to work 2]
+
+[Take this to management 2]: You decided to talk to Ada for the 2nd time to address the same issue. This time, she tells you to suck it up and deal with it, as this is one of the prices to work on an industry-leading team.
+
+Option1: [continue to work 2]
+Option2: [Quit 2]
+
+[Quit 2]: You leave the team having learned what a terrible working environment they have there and find a new job. Eventually, the team's poor work environment is discovered and Max's reputation is ruined.
+Option1: [Attempt to sue for workplace harassment]
+Option2: [Move on and try to find a job]
+
+[Ask for help]: You are thanked for finding it, and Max starts a tirade on the person who introduced the bug. You feel bad for the person who was berated for the mistake.
+
+Option1: [Take this to management 3]
+Option2: [continue to work 2]
+
+[Take this to management 3]: Its the price you have to pay if you mess up on an industry-leading team like this; it’s also none of your business how Max treats others.
+
+Option1: [continue to work 2]
+Option2: [Quit 3]
+
+[Quit 3]: You had enough; you finally decided to leave after all of the terrible workplace behaviour from Max and the ignorant team manager.
+Option1: [Attempt to sue for workplace harassment]
+Option2: [Move on and try to find job]
+
+[continue to work 2]: You continue to put up with a hostile work environment until it a video of one of Max’s many tirades gets leaked and the team is investigated for improper work practices and Max’s reputation is ruined. The team ultimately is going to replace both the manager and Max, you are offered Max’s position
+
+[continue2]
+
+[continue2]: Out of social controversies, the company made a difficult choice to remove Max from the team. Without Max, the work environment becomes far better
+
+Option1: [Don’t take promotion]
+Option2: [Take promotion]
+
+[Don’t take promotion]: The team ultimately can’t find a suitable replacement for Max and is disbanded.
+Option1: [The end]
+
+[Take promotion]: You continue working on research now as the leader, with a far better work environment for both you and your team members.
+Option1: [The end]
+
+[Move on and try to find a job]: You decide not to take revenge and move on.
+
+Option1: [The end]
+
+[Attempt to sue for workplace harassment]: You had enough; you filed a lawsuit for harassment against Max and the company for ignorance.
+
+Option1: [Law suit continue]
+
+[Law suit continue]: your lawsuit succeeds and you get a large sum of money for the workplace harassment claim.
+
+Option1: [The end]
+
+[The end]: The End
+

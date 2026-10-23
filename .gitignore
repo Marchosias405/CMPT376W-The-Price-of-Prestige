@@ -1,0 +1,43 @@
+# Local environments, caches and temporary files
+.env
+.env.*
+!.env.example
+!.env.sample
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+tmp/
+temp/
+*.tmp
+*.log
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Credentials and private key material
+credentials.json
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+.aws/
+.ssh/
+
+# Re-creatable package archives and preview renders (keep originals on disk)
+/work/Group15_Review_Package*.zip
+/work/Group15_Review_Project/review/pdf-preview/
+/work/Group15_Review_Project/review/preview_*.png
+/work/Group15_Review_Project/review/colour_*.png
+
+# Intentionally tracked: submission HTML/PDF, original handoff ZIP/PDF,
+# editable source/CSS, pinned runtime, licences, SVG diagrams and test reports.

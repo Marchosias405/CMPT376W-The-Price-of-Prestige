@@ -1,0 +1,70 @@
+:root {color-scheme:dark; font-size:18px;}
+* {box-sizing:border-box;}
+html {background:#0b1726;}
+body {margin:0; height:auto; min-height:100vh; color:#e6edf2; background:radial-gradient(ellipse at 90% 0%,#183c48 0,transparent 45%),#0b1726; font-family:Segoe UI,Arial,sans-serif;}
+tw-story {display:block; background:transparent; color:#e6edf2; width:min(100%,880px); max-width:880px; margin:0 auto; padding:28px 46px 64px; font-family:Segoe UI,Arial,sans-serif; font-size:1rem; line-height:1.65;}
+tw-passage {display:block;}
+tw-passage br:not([data-raw]), .choices > br {display:none;}
+tw-sidebar {display:none;}
+.masthead {display:flex; justify-content:space-between; gap:16px; padding-bottom:20px; margin-bottom:34px; border-bottom:1px solid #385165; color:#9eafbf; font-size:.65rem; letter-spacing:.14em; font-weight:600;}
+.eyebrow {color:#8ed8d1; font-size:.72rem; font-weight:700; letter-spacing:.12em; margin:4px 0 15px;}
+h1 {font-family:Georgia,serif; font-size:clamp(2rem,5vw,3.1rem); font-weight:400; line-height:1.1; letter-spacing:-.025em; color:#fff4e3; margin:0 0 26px;}
+h2 {font-size:1rem; color:#8ed8d1; font-weight:600; margin:0 0 8px;}
+p {margin:0 0 1.15em;}
+.deck {color:#c7d9e4; font-size:1.2rem; line-height:1.5;}
+blockquote {margin:22px 0; border-left:3px solid #75c9c0; padding:4px 0 4px 22px; color:#e8f2f4; font-size:1.05rem;}
+blockquote b {display:block; color:#8ed8d1; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:5px;}
+.choices {display:block; margin:28px 0;}
+.choices tw-link {display:block; color:#efffff; background:#193747; border:1px solid #547b8c; border-radius:7px; padding:14px 18px; margin:10px 0; font-weight:600; text-decoration:none; font-size:.94rem; line-height:1.45; cursor:pointer;}
+.choices tw-link:hover {background:#265464; border-color:#a3e6d7; color:#fff;}
+tw-link:focus-visible,a:focus-visible {outline:3px solid #ffcc85; outline-offset:4px;}
+a {color:#9be7df; text-decoration:underline; text-underline-offset:3px;}
+.reflection,.instructions {background:#102c3a; border:1px solid #365a6b; padding:20px 23px; border-radius:7px; margin:24px 0;}
+.reflection p:last-child {margin-bottom:0;}
+.credits {border-top:1px solid #385165; padding-top:22px; font-size:.78rem; color:#b7c7d4; line-height:1.75;}
+.small {font-size:.78rem; color:#bacbd7;}
+tw-transition-container {animation:none!important;}
+@media (max-width:540px) {tw-story {padding:20px 20px 42px;} .masthead {font-size:.58rem;letter-spacing:.06em;margin-bottom:25px;} h1 {font-size:2.35rem;} blockquote {padding-left:15px;} .reflection,.instructions {padding:17px;} .choices tw-link {padding:14px;} }
+@media (prefers-reduced-motion:reduce) {* {animation:none!important;transition:none!important;}}
+
+/* Context cues: protective actions, uncertain tradeoffs, and heightened risk. */
+.colour-key {font-size:.76rem;line-height:1.7;color:#c8d6df;margin:20px 0;}
+.colour-key span {display:inline-block;margin:7px 9px 7px 0;padding:3px 9px;border-radius:4px;border:1px solid;}
+.key-support {color:#a2e8bc;background:#173e2c;border-color:#69bd8a!important;}
+.key-caution {color:#ffdb9e;background:#44351d;border-color:#d9aa5c!important;}
+.key-risk {color:#ffc2c0;background:#48252c;border-color:#e58d91!important;}
+.choices tw-link {background:var(--choice-bg,#193747);border-color:var(--choice-edge,#547b8c);border-left-width:5px;box-shadow:0 0 18px var(--choice-glow,transparent);}
+.choices tw-link:hover {background:var(--choice-hover,#265464);border-color:var(--choice-edge,#a3e6d7);}
+.choices tw-link::before {content:var(--choice-note,"");display:block;color:var(--choice-edge,#8ed8d1);font-size:.64rem;letter-spacing:.09em;font-weight:700;margin-bottom:3px;}
+tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(2) tw-link,
+tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(1) tw-link,
+tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(2) tw-link,
+tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(2) tw-link,
+tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(3) tw-link { --choice-bg:#173e2c;--choice-edge:#83d5a2;--choice-hover:#23583c;--choice-glow:rgba(93,204,136,.14);--choice-note:"SUPPORT / PROTECTION";}
+tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(1) tw-link,
+tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(3) tw-link,
+tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(3) tw-link,
+tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(1) tw-link,
+tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(1) tw-link { --choice-bg:#44351d;--choice-edge:#edc17e;--choice-hover:#5d4726;--choice-glow:rgba(234,183,100,.12);--choice-note:"TRADEOFF / UNCERTAINTY";}
+tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(2) tw-link,
+tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(3) tw-link,
+tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(4) tw-link { --choice-bg:#48252c;--choice-edge:#f0a0a3;--choice-hover:#66333b;--choice-glow:rgba(236,105,116,.18);--choice-note:"HEIGHTENED RISK";}
+
+/* Scene tint is subtle; ending tint fills the screen more clearly. */
+body:has(tw-passage[tags~="tone-risk"]) {background:radial-gradient(ellipse at 90% 0%,#512b36 0,transparent 60%),#151923;}
+body:has(tw-passage[tags~="tone-support"]) {background:radial-gradient(ellipse at 90% 0%,#224e3b 0,transparent 60%),#0c1d23;}
+body:has(tw-passage[tags~="tone-caution"]) {background:radial-gradient(ellipse at 90% 0%,#493e2c 0,transparent 60%),#111d29;}
+body:has(tw-passage[tags~="outcome-good"]) {background:radial-gradient(ellipse at 50% 0%,#296443 0,#102b24 65%);}
+body:has(tw-passage[tags~="outcome-safe"]) {background:radial-gradient(ellipse at 50% 0%,#235c4b 0,#112d2b 65%);}
+body:has(tw-passage[tags~="outcome-progress"]) {background:radial-gradient(ellipse at 50% 0%,#325646 0,#182e2a 65%);}
+body:has(tw-passage[tags~="outcome-mixed"]) {background:radial-gradient(ellipse at 50% 0%,#654c2b 0,#30291e 65%);}
+body:has(tw-passage[tags~="outcome-cost"]) {background:radial-gradient(ellipse at 50% 0%,#68323f 0,#301c29 65%);}
+tw-passage[tags~="ending"] .eyebrow {padding:13px 16px;border:1px solid var(--ending-edge);border-left-width:5px;border-radius:5px;color:var(--ending-edge);background:rgba(0,0,0,.16);}
+tw-passage[tags~="ending"] .eyebrow::after {content:var(--ending-note);display:block;font-size:.63rem;margin-top:7px;letter-spacing:.06em;}
+tw-passage[tags~="ending"] .reflection {background:rgba(0,0,0,.18);border-color:var(--ending-edge);}
+tw-passage[tags~="ending"] h2 {color:var(--ending-edge);}
+tw-passage[tags~="outcome-good"] {--ending-edge:#a2e8b7;--ending-note:"POSITIVE CHANGE / TRUST STILL NEEDS REBUILDING";}
+tw-passage[tags~="outcome-safe"] {--ending-edge:#9de3c7;--ending-note:"PERSONAL SAFETY / OPPORTUNITY LOST";}
+tw-passage[tags~="outcome-progress"] {--ending-edge:#b5dcb4;--ending-note:"LOCAL IMPROVEMENT / LEADERSHIP UNRESOLVED";}
+tw-passage[tags~="outcome-mixed"] {--ending-edge:#ffdb9e;--ending-note:"UNCERTAIN OUTCOME / SUPPORT WHILE REVIEW CONTINUES";}
+tw-passage[tags~="outcome-cost"] {--ending-edge:#ffc0c2;--ending-note:"HARM CONTINUES / SUCCESS DOES NOT MEAN SAFETY";}

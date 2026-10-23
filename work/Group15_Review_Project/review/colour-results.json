@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "offline": true,
+  "results": [
+    {
+      "choiceCues": [
+        {
+          "bg": "rgb(23, 62, 44)",
+          "label": "\"SUPPORT / PROTECTION\""
+        },
+        {
+          "bg": "rgb(72, 37, 44)",
+          "label": "\"HEIGHTENED RISK\""
+        },
+        {
+          "bg": "rgb(68, 53, 29)",
+          "label": "\"TRADEOFF / UNCERTAINTY\""
+        }
+      ]
+    },
+    {
+      "ending": 1,
+      "tint": "radial-gradient(at 50% 0%, rgb(41, 100, 67) 0px, rgb(16, 43, 36) 65%)",
+      "badge": "\"POSITIVE CHANGE / TRUST STILL NEEDS REBUILDING\""
+    },
+    {
+      "ending": 2,
+      "tint": "radial-gradient(at 50% 0%, rgb(101, 76, 43) 0px, rgb(48, 41, 30) 65%)",
+      "badge": "\"UNCERTAIN OUTCOME / SUPPORT WHILE REVIEW CONTINUES\""
+    },
+    {
+      "ending": 3,
+      "tint": "radial-gradient(at 50% 0%, rgb(35, 92, 75) 0px, rgb(17, 45, 43) 65%)",
+      "badge": "\"PERSONAL SAFETY / OPPORTUNITY LOST\""
+    },
+    {
+      "ending": 4,
+      "tint": "radial-gradient(at 50% 0%, rgb(50, 86, 70) 0px, rgb(24, 46, 42) 65%)",
+      "badge": "\"LOCAL IMPROVEMENT / LEADERSHIP UNRESOLVED\""
+    },
+    {
+      "ending": 5,
+      "tint": "radial-gradient(at 50% 0%, rgb(104, 50, 63) 0px, rgb(48, 28, 41) 65%)",
+      "badge": "\"HARM CONTINUES / SUCCESS DOES NOT MEAN SAFETY\""
+    }
+  ],
+  "errors": []
+}

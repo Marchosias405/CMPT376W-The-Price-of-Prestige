@@ -1,0 +1,46 @@
+Here is the list again, leaving out the HTML file, grammar and passage names, and reading story.txt as the story outline with [] as links.
+
+## Design document
+
+Only the Scenario Description is written. These sections are still missing:
+- **ACM Case Study Identified** (0 pts, but required). It came out of the Scenario Description, so put it somewhere else, such as the title area.
+- **Team Name and Members** (0 pts, but required).
+- **Characters** (3 pts). It needs at least 3 characters who interact with the player in meaningful ways.
+- **Ethical Dilemmas** (8 pts, the biggest section). It needs a bulleted list with a few sentences on each choice and the reasoning behind it.
+- **Lesson Goals** (5 pts). It needs at least 2 goals that line up with the dilemmas.
+- **Story Flow diagram** (4 pts). It needs both the proposed and the final versions, with annotations. A bare Twine screenshot gets 0.
+- **Team Contributions table** (3 pts). It needs a percentage for each section.
+- **Scenario Description:** it should name all the main characters. Ada isn't mentioned yet, so one short line such as "the team's director, Ada" would cover it.
+
+## Intro screen (−2 if any item is missing)
+
+The story has no intro. It needs:
+- **Story name:** none yet.
+- **ACM case study link:** none yet.
+- **Group member names and roles:** none yet.
+
+## Coherence
+
+- **Stay-quiet path doesn't make sense:** "stay quiet" and "continue to work 1" lead to the same text, which says "annoyed by the team manager's response". A player who stayed quiet never spoke to the manager ([story.txt:21](story.txt#L21)).
+- **Ada's title changes:** she's called the "director" at [story.txt:14](story.txt#L14) and the "team manager" at [story.txt:21](story.txt#L21) and [story.txt:54](story.txt#L54).
+- **Missing speaker:** it's unclear who says "Its the price you have to pay…" ([story.txt:49](story.txt#L49)). It should be attributed to Ada.
+- **Ending repeats itself:** [story.txt:56](story.txt#L56) already says Max is being replaced and the player is offered his job. Then [story.txt:60](story.txt#L60) says the company removed Max, so the same thing happens twice.
+- **Final choice has no links:** "(take or don't)" at [story.txt:62](story.txt#L62) isn't written as links. Use `[Take]` / `[Don't take]` like the other choices.
+
+## Realistic choices (3 pts)
+
+- **The promotion isn't believable:** a new graduate a few months into the job being offered the famous team lead's position is likely to be marked as unrealistic.
+- **Disbanding the team is a stretch:** the team breaking up because the player turned the job down ([story.txt:64](story.txt#L64)) is hard to believe.
+- **Realistic options are missing:** there's no option to go to HR, talk to Max directly, keep a record of the incidents, or support the coworker who got berated.
+
+## Multiple perspectives (5 pts)
+
+- **Paths merge too soon:** almost every path ends up at `[continue to work 2]` and the promotion offer, so the choices don't seem to matter much.
+- **Quit endings are thin:** they're one line each and very similar. Quit 2 and continue to work 2 both end with Max's reputation ruined.
+- **The coworker has no name or voice:** the person who introduced the bug has nothing to say. Giving them a name and some lines would add a second perspective and a stronger character.
+- **The final choice isn't an ethical one:** take or don't take the promotion is a career decision. A choice like how to run the team differently would fit the theme better.
+
+## Visual appeal (5 pts)
+
+- Full marks require custom styling beyond the stock Twine look, with the same style on every passage. Plan time for this when you build the game.
+
