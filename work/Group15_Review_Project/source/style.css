@@ -27,28 +27,7 @@ tw-transition-container {animation:none!important;}
 @media (max-width:540px) {tw-story {padding:20px 20px 42px;} .masthead {font-size:.58rem;letter-spacing:.06em;margin-bottom:25px;} h1 {font-size:2.35rem;} blockquote {padding-left:15px;} .reflection,.instructions {padding:17px;} .choices tw-link {padding:14px;} }
 @media (prefers-reduced-motion:reduce) {* {animation:none!important;transition:none!important;}}
 
-/* Context cues: protective actions, uncertain tradeoffs, and heightened risk. */
-.colour-key {font-size:.76rem;line-height:1.7;color:#c8d6df;margin:20px 0;}
-.colour-key span {display:inline-block;margin:7px 9px 7px 0;padding:3px 9px;border-radius:4px;border:1px solid;}
-.key-support {color:#a2e8bc;background:#173e2c;border-color:#69bd8a!important;}
-.key-caution {color:#ffdb9e;background:#44351d;border-color:#d9aa5c!important;}
-.key-risk {color:#ffc2c0;background:#48252c;border-color:#e58d91!important;}
-.choices tw-link {background:var(--choice-bg,#193747);border-color:var(--choice-edge,#547b8c);border-left-width:5px;box-shadow:0 0 18px var(--choice-glow,transparent);}
-.choices tw-link:hover {background:var(--choice-hover,#265464);border-color:var(--choice-edge,#a3e6d7);}
-.choices tw-link::before {content:var(--choice-note,"");display:block;color:var(--choice-edge,#8ed8d1);font-size:.64rem;letter-spacing:.09em;font-weight:700;margin-bottom:3px;}
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(3) tw-link { --choice-bg:#173e2c;--choice-edge:#83d5a2;--choice-hover:#23583c;--choice-glow:rgba(93,204,136,.14);--choice-note:"SUPPORT / PROTECTION";}
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(1) tw-link { --choice-bg:#44351d;--choice-edge:#edc17e;--choice-hover:#5d4726;--choice-glow:rgba(234,183,100,.12);--choice-note:"TRADEOFF / UNCERTAINTY";}
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(4) tw-link { --choice-bg:#48252c;--choice-edge:#f0a0a3;--choice-hover:#66333b;--choice-glow:rgba(236,105,116,.18);--choice-note:"HEIGHTENED RISK";}
+
 
 /* Scene tint is subtle; ending tint fills the screen more clearly. */
 body:has(tw-passage[tags~="tone-risk"]) {background:radial-gradient(ellipse at 90% 0%,#512b36 0,transparent 60%),#151923;}

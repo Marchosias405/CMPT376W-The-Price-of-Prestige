@@ -88,8 +88,8 @@
 			<path d="M 425,177 L 425,161 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
 			<polygon points="425 161, 422.6 166, 427.4 166" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 1; fill: rgb(32%,40%,45%); fill-rule: evenodd;"/>
 			<rect x="117" y="30" width="270" height="39" rx="6" ry="6" style="stroke: rgb(80%,86%,88%); stroke-linecap: butt; stroke-width: 0.8; fill: rgb(91%,95%,95%); fill-rule: evenodd;"/>
-			<text x="164.13975" y="52.25" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,104) scale(1,-1)">Credit | both names missing from the paper</text>
-			<text x="197.43425" y="40.75" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,81) scale(1,-1)">Continues on final diagram B</text>
+			<text x="175.23649999999998" y="52.25" style="font-family: Helvetica-Bold; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,104) scale(1,-1)">Credit | manuscript depends on repair</text>
+			<text x="172.865" y="40.75" style="font-family: Helvetica; font-size: 8.5px;fill: rgb(13%,23%,30%); stroke:none;" transform="translate(0,81) scale(1,-1)">Solo: Diane excluded; Pair/Open: credited</text>
 			<path d="M 79,106 L 79,87.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
 			<path d="M 79,87.5 L 252,87.5 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>
 			<path d="M 252,87.5 L 252,69 Z" style="stroke: rgb(32%,40%,45%); stroke-linecap: butt; stroke-width: 0.8;"/>

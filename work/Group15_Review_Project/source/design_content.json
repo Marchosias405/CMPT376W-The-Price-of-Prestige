@@ -1,31 +1,86 @@
+
 {
   "title": "The Price of Prestige",
   "subtitle": "CMPT 376W | G1 - ACM Code of Ethics Case Study | Group 15",
-  "scenario": "Diane, a new graduate, joins a prestigious augmented reality research team. Its technical lead, Max, humiliates staff over mistakes, while research manager Jean protects his reputation and the funding he attracts. A tracking defect before a sponsor demonstration tests Diane's willingness to seek review. When Max removes Diane and coworker Eli from a paper that uses their work, she must balance earned credit, financial stability, Eli's wishes, and institutional accountability. HR adviser Priya explains possible responses without promising a finding. Four decision stages lead to five outcomes that preserve both gains and unresolved costs.",
+  "scenario": "Diane, a new graduate, joins a prestigious augmented reality research team led by Max, whose abusive outbursts are excused by manager Jean. How Diane handles a tracking defect changes the next conflict: a rushed solo repair leads Max to remove Diane's manuscript credit while retaining Eli's; joint review preserves both names but draws a threat to future credit; public reporting preserves both names but reveals intimidation and concerns about unequal treatment of women researchers. Coworker Eli sets boundaries on what he will share, and HR adviser Priya explains possible responses without promising a finding. Players learn to separate technical responsibility from abuse and to weigh fair recognition, consent, self-protection, and accountability.",
   "characters": [
-    ["Diane | player", "A new graduate who values learning, rent-paying stability, and fair recognition. The player chooses her response to humiliation, the defect, research credit, and the future. Her technical responsibility does not make her responsible for Max's abusive choices."],
-    ["Max | technical lead", "An acclaimed AR researcher who equates deadlines and prestige with authority. He insults Diane, blames Eli, and uses authorship as punishment. His expertise explains his power without excusing the abuse. He directly responds to technical and credit decisions."],
-    ["Jean | research manager", "Fears losing funding and irreplaceable technical leadership. On the Jean route she dismisses Diane's concern; on every route she is copied on the credit decision. She acknowledges a written objection only if Diane sends one, and permits peer practices for productivity while protecting Max."],
-    ["Eli | coworker", "Wants reliable work and earned credit but fears retaliation. He reviews the defect with Diane when asked, explains the costs of secrecy or public blame, and voices his own reporting boundaries. After paired review he may authorize a specific named statement; Diane can still choose to leave it private."],
-    ["Priya | HR adviser", "Works outside Jean's reporting line and explains this fictional company's review, interim support, and transfer options. She distinguishes an options conversation from a formal report, accepts Diane's own observations without requiring Eli's participation, and cannot guarantee secrecy or a particular finding."]
+    [
+      "Diane | player",
+      "A recent graduate working on an AR research team. She values financial stability, professional development, and fair recognition. The player determines how she responds to Max's abusive behaviour, a technical defect, concerns about authorship, and the workplace environment. Diane's earlier decisions influence which later opportunities are available."
+    ],
+    [
+      "Max | technical lead",
+      "A prestigious AR researcher who uses his reputation and technical expertise to justify aggressive management. He humiliates employees, discourages criticism, and threatens research recognition. Following Diane's rushed repair, he removes her authorship despite her earlier contributions. His behaviour also raises concerns about the unequal treatment of women researchers. His expertise does not excuse workplace abuse."
+    ],
+    [
+      "Jean | research manager",
+      "The manager overseeing Max's research team. She prioritizes funding, deadlines, and Max's reputation, dismissing employee concerns rather than confronting him. She postpones Diane's written objections and permits technical improvements without fully addressing the leadership problem."
+    ],
+    [
+      "Eli | coworker",
+      "An engineer responsible for part of the AR tracking system. Max verbally humiliates him, but Eli retains his authorship throughout the story. His willingness to cooperate depends on how Diane previously treated him. He may assist with technical improvements while declining to provide a named statement. His participation in reporting is voluntary."
+    ],
+    [
+      "Priya | HR adviser",
+      "An HR adviser outside Jean's reporting line. She explains formal reporting, temporary supervision, and transfer options. She emphasizes factual evidence, confidentiality limitations, and respect for coworker consent. She cannot guarantee that an investigation will establish misconduct or produce a particular outcome."
+    ]
   ],
   "dilemmas": [
-    ["Speak up, document, or protect an immediate position", "Tell Jean to seek supervisory intervention, even though Diane risks dismissal of her concern; record the incident while fresh to preserve a specific factual account, although a record alone brings no immediate protection; or remain quiet for now because Diane needs the job and fears becoming a target. The merged Defect scene remembers which response occurred. Only Record creates the contemporaneous outburst note."],
-    ["Reliable review under fear of blame", "Ask Eli to review and test a fix together because his expertise may expose a faulty assumption; this costs a morning and builds trust. Attempt a rushed solo repair to avoid exposing Eli or missing the deadline; inadequate review causes a reset regression, followed by rollback, a reviewed correction, and a two-day delay. Raise the defect openly to make the risk visible; Max targets Eli, while the team performs a focused review and delays a day. Reporting a defect never makes Diane responsible for Max's abuse."],
-    ["Earned credit, another person's agency, and career security", "Challenge the author list with permitted contribution records to defend recognition, despite further hostility. Alternatively, support Eli privately and ask what he wants shared: after Pair he permits a named statement for Priya, and Diane can accept that scope or leave him to send it himself; after Solo or Open he declines a statement. Accept the omission for now to avoid confrontation and preserve a reference or paycheque. Support is not evidence collection, and Eli's refusal does not stop Diane reporting her own experience."],
-    ["Longer-term accountability and uncertain costs", "File a factual formal report to seek external review of the management chain; its outcome depends on the authored information route and can remain unresolved. Request a transfer to protect well-being while giving up the prestigious research post; optionally leave an account of Diane's own experience, without treating it as a formal complaint. Stay and build peer review and a contribution ledger to improve what coworkers can control, while leadership remains unresolved. Keep working without further action to preserve immediate stability, leaving fear and unfair credit in place. None of these choices transfers responsibility for abuse from Max to Diane."]
+    [
+      "Responding to abusive workplace behaviour",
+      "Following Max's first outburst, Diane can approach Jean, document the incident, or remain quiet. Speaking to management seeks intervention but risks dismissal of her concerns. Documentation creates a contemporaneous record without immediately changing the situation. Remaining quiet protects her short-term position but leaves the misconduct unchallenged. Her response affects the information available during a later investigation."
+    ],
+    [
+      "Handling a technical defect under pressure",
+      "Diane can work with Eli to review the defect, attempt a rushed repair alone, or raise the issue publicly. Joint review improves reliability and builds cooperation but delays rehearsal. A rushed solo repair introduces a regression, leading to additional testing and retaliation against Diane. Public reporting exposes the defect but provokes Max's hostility toward Eli. Each option creates different technical and interpersonal consequences."
+    ],
+    [
+      "Research credit, retaliation, and unequal treatment",
+      "The manuscript conflict depends on the technical decision. After Solo, Max removes Diane's authorship while retaining Eli's. After Pair, both remain credited, but Max threatens Diane's future recognition. After Open, both retain credit, while concerns about intimidation and unequal treatment of women researchers remain. Diane can challenge the conduct with work records, seek Eli's support while respecting his consent, or avoid confrontation to preserve immediate career stability."
+    ],
+    [
+      "Reporting, leaving, cooperating, or remaining silent",
+      "Diane can file a formal report, request a transfer, establish safer peer-review practices, or continue without further action. Formal reporting may produce accountability or an unresolved investigation, depending on available evidence. A transfer protects Diane but leaves the original team unchanged. A joint peer initiative requires established cooperation with Eli and cannot be selected after an unsupported solo repair unless Diane later speaks with him. Remaining silent maintains short-term stability but leaves workplace problems unresolved. Reporting and transfer remain available regardless of earlier decisions."
+    ]
   ],
   "goals": [
-    ["Distinguish constructive criticism from abuse", "Compare fixing the calibration labels and reviewing the tracker with Max's attacks on a person's worth. The correction is needed; humiliation is not. Ask what useful feedback would have sounded like in Outburst or Solo."],
-    ["Compare self-protection, support, and reporting under uncertainty", "Contrast Report, Exit, Peers, and Silence. Consider what each preserves and leaves unresolved, and why Eli's statement is voluntary. The endings invite reflection rather than awarding a moral score."],
-    ["Explain why mistakes do not cancel earned research credit", "Credit uses the same contributions after both competent review and a rushed error. Challenge records an objection; E1 restores credit while E3-E5 can leave the old paper unresolved. A contribution is not a reward for obedience."],
-    ["Explain leadership's effect on working conditions and quality", "Connect fear-driven secrecy in Solo with review and learning in Pair and Peers. Jean's incentives protect Max, while E4 shows that local technical gains do not establish institutional accountability."]
+    [
+      "Distinguish professional accountability from workplace abuse",
+      "Players should recognize that technical mistakes require correction and review, but they do not justify humiliation or retaliation. The Solo route demonstrates that Diane can accept responsibility for a regression while opposing the removal of earned research credit."
+    ],
+    [
+      "Evaluate fairness and unequal treatment in research recognition",
+      "Players should understand that authorship should reflect actual contributions rather than obedience to management. The conditional manuscript scenarios highlight retaliation, threats to future recognition, and concerns about unequal treatment of women researchers. ACM principle 1.5 emphasizes giving appropriate credit for intellectual work."
+    ],
+    [
+      "Understand how earlier decisions affect later opportunities",
+      "Players should observe how technical cooperation, documentation, and interpersonal trust influence later dialogue, evidence, and available actions. The joint peer initiative becomes unavailable after an unsupported solo repair unless Diane rebuilds cooperation with Eli. Reporting and transferring remain possible regardless of earlier decisions."
+    ],
+    [
+      "Compare ethical responses under uncertainty",
+      "Players should evaluate formal reporting, personal protection, peer cooperation, and remaining silent. Each ending involves both benefits and unresolved costs. ACM principles 1.2, 2.4, 2.6, 3.3, and 3.4 connect harm reduction, constructive review, professional responsibility, and effective organizational leadership."
+    ]
   ],
   "outcomes": [
-    ["E1 | Accountability begins", "An independent review restores earned credit and an experienced interim supervisor handles daily reviews. The milestone moves and trust remains damaged. Eli's authorized statement can corroborate the account; without it, the dated note plus written objection leads to a separate confirming interview with Jean. ACM 1.5, 3.3, 3.4."],
-    ["E2 | Review unresolved", "Interviews conflict and some colleagues will not speak on the record. The author list remains under review; an outside supervisor provides interim distance while Diane keeps her salary. Unresolved does not mean false. ACM 1.2, 3.4."],
-    ["E3 | A safer exit", "A transfer follows a two-week handover, preserving salary while costing the particular research opportunity. A voluntary exit account may be retained; it does not trigger a promised full review. Max still leads the old group. ACM 1.2, 3.3."],
-    ["E4 | Local progress", "Peer review catches a later error and a contribution ledger improves traceability. The old credit dispute and Max's authority persist; people still tense when he enters. ACM 2.4, 2.6, 3.3, 3.4."],
-    ["E5 | Success with a cost", "The sponsor demo succeeds using a reviewed repair, with the route's stated delay. Funding and pay continue while unfair credit and fear remain. Earlier challenge or support changes the personal consequence. ACM 1.4, 1.5."]
+    [
+      "E1 | Accountability begins",
+      "An independent review establishes misconduct and initiates management changes. After Solo, Diane's earned authorship is restored; after Pair or Open, her existing authorship remains intact while concerns about threats or unequal treatment are addressed. An experienced interim supervisor takes responsibility for daily reviews. Research is delayed and rebuilding trust remains necessary. ACM 1.5, 3.3, 3.4."
+    ],
+    [
+      "E2 | Review unresolved",
+      "An investigation cannot establish every allegation because the available accounts and evidence remain incomplete or disputed. After Solo, Diane's missing credit has not yet been restored; after Pair or Open, authorship remains intact but concerns about intimidation or unequal treatment remain unsettled. Diane receives temporary reporting arrangements while the investigation continues. ACM 1.2, 3.4."
+    ],
+    [
+      "E3 | A safer exit",
+      "Diane transfers to another technical group after a handover, preserving her salary but losing the opportunity to continue in the prestigious AR lab. The authorship situation remains consistent with her earlier repair decision. She can choose whether to leave an exit account. Max continues leading the original team, so protecting herself does not resolve the wider problem. ACM 1.2, 3.3."
+    ],
+    [
+      "E4 | Local progress",
+      "Diane and Eli introduce two-person reviews, a shared defect log, and a contribution ledger. Technical reliability improves, but Max retains authority and the earlier authorship concerns remain unresolved. This ending is accessible only when Diane previously established or rebuilt technical cooperation with Eli. Peer improvements cannot replace accountable leadership. ACM 2.4, 2.6, 3.3, 3.4."
+    ],
+    [
+      "E5 | Success with a cost",
+      "The sponsor demonstration succeeds using a reviewed technical repair, preserving funding and Diane's salary. The exact delay and manuscript situation depend on her earlier repair decision. Max continues intimidating employees, and previously raised objections may remain unanswered. Technical success does not establish that the workplace is ethical or safe. ACM 1.4, 1.5."
+    ]
   ]
 }
