@@ -1,6 +1,6 @@
 """Rebuild matching design PDF and editable/rendered flow diagrams.
 Run: python source/generate_pdf.py from the package root, or any directory.
-Requires Python 3, reportlab, pypdf. Reads graph.json compiled from story.twee.
+Requires Python 3, reportlab, pypdf. Reads graph.json compiled from story.twee (run node source/build.mjs first).
 Fill team_contributions.csv and perspective_notes.json with real team data.
 """
 from pathlib import Path
@@ -68,7 +68,15 @@ class Flow:
         self.d.add(Line(sx,sy,sx,mid,strokeColor=MUTED,strokeWidth=.8));self.d.add(Line(sx,mid,ex,mid,strokeColor=MUTED,strokeWidth=.8));self.d.add(Line(ex,mid,ex,ey,strokeColor=MUTED,strokeWidth=.8))
         self.d.add(Polygon([ex,ey,ex-2.4,ey+5,ex+2.4,ey+5],fillColor=MUTED,strokeColor=MUTED))
         if label:self.d.add(String(label_x if label_x is not None else (sx+ex)/2+4,self.h-label_y if label_y is not None else mid+4,label,fontName='Helvetica',fontSize=8,fillColor=TEAL))
-    def export(self,name):renderSVG.drawToFile(self.d,str(DIAG/(name+'.svg')));return self.d
+    def export(self, name):
+        # ReportLab can emit CRLF on Windows. Git treats the trailing CR
+        # on newly generated SVG lines as trailing whitespace.
+        output = DIAG / (name + '.svg')
+        renderSVG.drawToFile(self.d, str(output))
+        raw = output.read_bytes()
+        normalized = raw.replace(b'\r\n', b'\n').replace(b'\r', b'\n')
+        output.write_bytes(normalized)
+        return self.d
 
 # Faithful transcription of the supplied proposal's page 3; no final-stage additions.
 f=Flow(544)
@@ -101,12 +109,12 @@ for id,x,l in [('Jean',0,'Jean\nAsk manager to intervene\n$first = jean'),('Reco
 f.node('Defect',117,249,270,38,'Defect | how to handle the tracker bug\nRecalls the actual first response',size=8.5)
 for id in ['Jean','Record','Quiet']:checked(f,id,'Defect')
 for id,x,l in [('Pair',0,'Pair\nReview and test with Eli\n$repair = pair; +1 morning'),('Solo',173,'Solo\nRush, regress, then correct\n$repair = solo; +2 days'),('Open',346,'Open\nRaise risk at team review\n$repair = open; +1 day')]:f.node(id,x,319,158,55,l,size=8.5);checked(f,'Defect',id)
-f.node('Credit',117,411,270,39,'Credit | both names missing from the paper\nContinues on final diagram B',size=8.5)
+f.node('Credit',117,411,270,39,'Credit | manuscript depends on repair\nSolo: Diane excluded; Pair/Open: credited',size=8.5)
 for id in ['Pair','Solo','Open']:checked(f,id,'Credit')
 finala=f.export('final_flow_A')
 
 f=Flow(370)
-f.node('Credit',137,0,230,35,'Credit | immediate response')
+f.node('Credit',137,0,230,35,'Credit | route-dependent manuscript')
 for id,x,l in [('Challenge',0,'Challenge\nObject with work records\n$challenged = true'),('Accept',364,'Accept\nProtect immediate stability\n$credit = accept')]:f.node(id,x,71,140,57,l,size=8);checked(f,'Credit',id)
 f.node('Support',149,71,206,140,'Support\nAsk Eli what he wants shared\n$supported = true\n\nIf $repair = pair:\naccept statement: $consent = true\nor keep private: $consent = false\nOtherwise respect refusal:\n$consent = false',size=8)
 checked(f,'Credit','Support')
@@ -117,7 +125,7 @@ finalb=f.export('final_flow_B')
 
 f=Flow(440)
 f.node('Options',137,0,230,35,'Options | choose the longer-term response')
-for id,x,l in [('Report',0,'Report\nFile factual report'),('Exit',130,'Exit\nPlan a transfer'),('Peers',260,'Peers\nBuild peer practices'),('Silence',390,'Silence\nNo further action')]:f.node(id,x,72,114,42,l,size=8.5);checked(f,'Options',id)
+for id,x,l in [('Report',0,'Report\nFile factual report'),('Exit',130,'Exit\nPlan a transfer'),('Peers',260,'Peers\nJoint peer review\n(if cooperative)'),('Silence',390,'Silence\nNo further action')]:f.node(id,x,72,114,42,l,size=8.5);checked(f,'Options',id)
 for id,x,y,l in [('E1',0,224,'E1\nAccountability\nbegins'),('E2',103,224,'E2\nReview unresolved'),('E3',206,224,'E3\nA safer exit'),('E4',309,224,'E4\nLocal progress'),('E5',412,224,'E5\nSuccess with a cost')]:f.node(id,x,y,92,55,l,fill=colors.HexColor('#FFF3DE'),size=8.4)
 for a,b in [('Report','E1'),('Report','E2'),('Exit','E3'),('Peers','E4'),('Silence','E5')]:checked(f,a,b)
 f.node('Intro',137,355,230,38,'Intro | fresh restart from every ending\nHarlowe (restart:) clears story history',size=8.5)
@@ -133,16 +141,34 @@ exit_index=0
 for e in graph['edges']:
     label=e['label'].replace('"',"'")
     if e['from']=='Options' and e['to']=='Silence':label='Keep working without further action'
+    if e['from']=='Options' and e['to']=='Peers':label='if repair != solo OR supported'
     if e['from']=='Report':label=('if documented AND challenged, OR consent' if e['to']=='E1' else 'otherwise')
     if e['from']=='Support':
-        label=['if not pair: respect refusal; consent=false','if pair: accept scoped statement; consent=true','if pair: keep statement private; consent=false'][support_index]
-        support_index+=1
+        # build.mjs enumerates [[wikilinks]] before (go-to:) macros.
+        # Consequently the two refusal links appear before the two Pair links.
+        support_labels = [
+            'Solo: refuse named statement; consent=false',
+            'Open: refuse named statement; consent=false',
+            'Pair: share authorized statement; consent=true',
+            'Pair: keep statement private; consent=false',
+        ]
+        if support_index >= len(support_labels):
+            raise ValueError('Unexpected additional Support link; update final-flow annotations.')
+        label = support_labels[support_index]
+        support_index += 1
     if e['from']=='Exit':
         label=['leave factual exit account; exitAccount=true','no exit account; exitAccount=false'][exit_index]
         exit_index+=1
     mm.append(f'  {e["from"]} -->|"{label}"| {e["to"]}')
-mm += ['  %% Support: after Pair, accept named statement or keep private; otherwise respect refusal.', '  %% Exit: choose factual exit account true or false before E3.', '  %% Frame is an automatically rendered header, not a navigable story node.']
-(DIAG/'final_flow.mmd').write_text('\n'.join(mm)+'\n',encoding='utf-8')
+assert support_index == 4, f'Expected four Support links; found {support_index}. Rebuild graph.json first.'
+mm += [
+    '  %% Support: after Pair, share authorized statement or keep it private.',
+    '  %% Support: after Solo or Open, respect Eli refusal; no permission to share.',
+    '  %% Peers: available after Pair or Open, or after Solo followed by Support.',
+    '  %% Exit: choose factual exit account true or false before E3.',
+    '  %% Frame is an automatically rendered header, not a navigable story node.',
+]
+(DIAG/'final_flow.mmd').write_text('\n'.join(mm)+'\n', encoding='utf-8', newline='\n')
 
 content=[]
 def add(s,kind='body'):content.append(p(s,kind))
@@ -159,7 +185,7 @@ content.append(Spacer(1,10))
 content.append(table([['Team member','Supplied role'],['Kazi Boni Amin','Programmer and art designer'],['Krrish Setia','Main writer'],['Andy Wang','Editor and secondary writer']],[175,329]))
 add('1. Scenario Description','h2');add(plain(data['scenario']))
 add('Adaptation and scope','h2')
-add('The handoff identifies Diane, Max, Jean, the AR setting, workplace abuse, and punitive credit removal as the original premise. This adaptation adds Eli and Priya, specific technical review consequences, documentation and consent choices, a fictional reporting process, and five distinct endings. All game dialogue is newly authored for this build; no source quotations are claimed.')
+add('The supplied original premise includes Diane, Max, Jean, AR research, workplace abuse, and punitive changes to research credit. This adaptation adds Eli and Priya, three route-dependent manuscript situations, documentation and consent choices, concerns about unequal treatment, a fictional reporting process, and five distinct endings. Dialogue is original to this project; no source quotations are claimed.')
 add('The implemented story uses Harlowe 3.3.9, 25 navigable passages, a shared header passage, four main decision stages, and five endings. The separate test report records performed checks and limitations.')
 add('Review status','h2')
 add('Actual section contribution percentages and ownership of perspective-elements are awaiting team confirmation. Known roles do not establish percentages or authorship. See Section 6 for the precise missing facts. This document is a review candidate, not a claim of team approval.' if not complete else 'The contribution fields below have been supplied and marked confirmed in the editable inputs. This does not itself record approval or submission.','small')
@@ -191,32 +217,34 @@ add('<b>Unchanged:</b> the three responses to abuse and the three approaches to 
 add('Notation: $names are internal Harlowe state, not a player-visible score. Record also sets $first = record. No other first response creates an outburst record.','small')
 
 page('5. Story Flow | final B','IMPLEMENTED PASSAGES / CREDIT, CONSENT, AND OPTIONS')
-add('The three immediate credit responses remain. The Support passage now has explicit conditional choices, followed by a separate Debrief and an options conversation with Priya.','small')
+add('The manuscript varies by earlier technical choice: Solo excludes Diane from authorship while Eli remains credited; Pair preserves both bylines but threatens future credit; Open preserves both while exposing intimidation and unequal-treatment concerns. The next Challenge, Support, and Accept choices use route-specific wording.','small')
 content.append(finalb)
 add('Conditional links within Support','h2')
-add('After Pair, Eli authorizes only a named statement for Priya. The player may accept the permission ($consent = true) or keep it private ($consent = false). After Solo or Open, Eli refuses a private statement and the only continuation respects that boundary. All three displayed variants lead to Debrief; they are distinct tested-choice targets even though the destination is the same.','small')
+add('After Pair, Eli authorizes one named statement for Priya; the player chooses whether to share it ($consent = true) or keep it private (false). After Solo or Open, Eli refuses a named statement, using route-specific dialogue. Four distinct displayed choice links return to Debrief; a shared destination does not erase their different context or consent.','small')
 add('Annotation: Challenge sets $credit = challenge; Support sets $credit = support; Accept sets $credit = accept. Only Challenge sets $challenged. Only Support sets $supported. Debrief separates the outburst note, the authorship objection, and Eli\'s private account.','small')
 add('<b>Added precision:</b> a limited consent decision and an evidence summary replace an implicit assumption that supporting Eli always provides a statement. Hearing Priya\'s options is not filing a complaint.','small')
 
 page('5. Story Flow | final C','IMPLEMENTED PASSAGES / RESPONSES AND FIVE ENDINGS')
-add('Four longer-term responses and all five planned outcome concepts are retained. Every ending includes a reflection and a true restart.','small')
+add('The final decision has four possible responses, but not every option is available on every route. Report, Exit, and Silence remain available to everyone. Peers requires Pair, Open, or Solo followed by Support. Five endings retain their separate reflections and fresh restart.','small')
 content.append(finalc)
 add('State-dependent routes and in-passage choices','h2')
 add('<b>Report to E1:</b> ($documented and $challenged) or $consent. <b>Report to E2:</b> otherwise. This is an authored fictional branching rule, not a prediction of a real HR process. E1 without Eli\'s statement includes Jean separately confirming the deferral of the written authorship objection.','small')
 add('<b>Exit to E3:</b> choose a factual exit account ($exitAccount = true) or transfer without it (false). Both reach E3, whose account text changes. The implemented exit is a confirmed transfer after handover; a job search is the contingency discussed in Exit.','small')
+add('<b>Peers to E4:</b> permitted only when $repair is not solo or $supported is true. Cooperation on technical review is independent of consent to share a named statement.','small')
+add('<b>Example route to E2:</b> Quiet, Solo, Accept, then Report. Without an earlier dated record, written objection, or authorized statement, the fictional review remains unresolved.','small')
 
 page('5. Story Flow | consequences','FIVE DISTINCT OUTCOMES / NO GUARANTEED CLEAN VICTORY')
 for name,desc in data['outcomes']:add(plain(name),'h2');add(plain(desc))
 add('What changed, and what did not','h2')
-add('The revised proposal\'s four-stage structure and five ending concepts remain intact. The build adds explicit consent and exit-account choices, separate Debrief and Options passages, concrete repair delays, and a precise report guard. The older outline\'s automatic lawsuit payout, graduate-to-lead promotion, team collapse, and inconsistent Ada naming are absent. Those were already rejected by the revised proposal, not new post-build discoveries.','small')
+add('After teammate review, all decision buttons now use neutral styling instead of colour-coded hints; the manuscript changes with the earlier repair route, and a joint peer initiative requires cooperation. The supplied initial proposed-flow diagram remains as design history; the final flow diagrams document the implemented changes. The five ending concepts and four major decision stages remain.','small')
 
 page('5. Story Flow | state contract','WHY MERGED PASSAGES REMEMBER CHOICES')
-content.append(table([['State and initial value','Set by / persistent consequence'],['$first = none','Jean, Record, or Quiet identifies the first response. Defect and Debrief recall only conversations that occurred.'],['$documented = false','Record sets true. Debrief and Report distinguish a fresh note from recollection. With $challenged, enables the E1 report route without Eli.'],['$repair = none','Pair, Solo, or Open records the technical route. Credit, Support, Peers, Silence, and endings carry review, trust, repair, or delay consequences.'],['$credit = none; $challenged = false','Challenge sets credit=challenge and challenged=true. Support/Accept set the corresponding credit label. The challenged flag preserves the objection in Debrief, Report, and E3-E5. $credit is an explicit route record; the matching flags drive the prose.'],['$supported = false','Support sets true. Peer cooperation and exit/ending text recall the private conversation without inventing a statement.'],['$consent = false','Only Pair followed by Support and acceptance of the scoped permission sets true. Report shares only that account. It provides an alternate route to E1.'],['$exitAccount = false','Exit explicitly sets true or false before E3, changing what Priya retains.']],[150,354]))
+content.append(table([['State and initial value','Set by / persistent consequence'],['$first = none','Jean, Record, or Quiet identifies the first response. Defect and Debrief recall only conversations that occurred.'],['$documented = false','Record sets true. Debrief and Report distinguish a fresh note from recollection. With $challenged, enables the E1 report route without Eli.'],['$repair = none','Pair, Solo, or Open records the repair route. Only Solo removes Diane from the paper; Pair/Open preserve her byline. Pair/Open also allow a later joint peer initiative.'],['$credit = none; $challenged = false','Challenge sets credit=challenge and challenged=true. Support/Accept set the corresponding credit label. The challenged flag preserves the objection in Debrief, Report, and E3-E5. $credit is an explicit route record; the matching flags drive the prose.'],['$supported = false','Support sets true, enabling a joint peer initiative even after Solo. Conversations affect later text but do not grant testimony consent by themselves.'],['$consent = false','Only Pair followed by Support and acceptance of the scoped permission sets true. Report shares only that account. It provides an alternate route to E1.'],['$exitAccount = false','Exit explicitly sets true or false before E3, changing what Priya retains.']],[150,354]))
 add('Reset and implementation discipline','h2')
 add('Intro initializes all eight variables. Each ending uses Harlowe\'s (restart:) macro, returning to fresh initialization and clearing story history. The canonical Twee source supplies the HTML build; graph.json is generated from its passage links. The final diagrams assert that every distinct source-to-destination pair in graph.json is represented across A-C.','small')
-add('Repeated destination links in Support and Exit are annotated explicitly rather than drawn as overlapping arrows. The Mermaid export retains every compiled edge. Report guards are read from the implemented story and stated above; a plain graph edge alone does not imply unconditional reachability.','small')
+add('Support has four conditional choice links to Debrief; Exit has two links to E3. Their variants are annotated instead of drawn as overlapping arrows. The Mermaid export retains each compiled link. The Options-to-Peers edge is conditional on $repair is not solo or $supported. Graph edges alone do not imply unconditional reachability.','small')
 add('Visual and interaction design','h2')
-add('The AR-office interface uses labelled green choices for support or protection, amber for uncertain tradeoffs, and red for heightened risk or continuing harm. Scene backgrounds echo the situation. Ending screens use green for accountability, teal-green for a safer exit or local progress, amber for unresolved review, and red for success with continuing harm. Text labels and reflections preserve the tradeoffs; colour is not a guarantee or moral score. System fonts, readable line lengths, speaker labels, and visible keyboard focus support navigation. It has no timer, moral-score meter, remote media, or external instructions required to play. The full Harlowe runtime is embedded in the playable HTML.','small')
+add('The AR-office interface uses the same neutral style for all choice buttons, so colours do not suggest a preferred answer. Scene backgrounds add atmosphere; the different ending backgrounds distinguish outcomes only after the player has chosen. Readable typography, labelled dialogue, responsive spacing, and visible keyboard focus support navigation. There is no timer, moral score, or required remote media. The playable HTML embeds the Harlowe runtime.','small')
 
 page('6. Team Contributions','REAL CONTRIBUTIONS / CONFIRMATION REQUIRED')
 add('The supplied roles on page 1 are known. They do not establish actual percentages or who developed a particular perspective. Proposed allocations in the initial plan are not evidence of completed work.','body')
@@ -233,7 +261,7 @@ for name,n in notes.items():
 add('Exactly what the team needs to supply','h2')
 add('Provide each member\'s actual percentage for each of the five rows, with every row totaling 100%, and identify each person\'s actual perspective-element(s), with a concrete passage or example. Edit source/team_contributions.csv and source/perspective_notes.json, then rerun source/generate_pdf.py. Blank data remains visibly pending; the script validates completed percentage rows and does not invent missing values.','small')
 add('Sources and attribution','h2')
-add('<b>Primary assignment authority:</b> the supplied reference/04_assignment_and_rubric.txt. <b>Design baseline:</b> 05_revised_build_spec.md and the unchanged five-page G15_Initial_Design_and_Build_Plan.pdf. Earlier story, design, and feedback files provide context; the historical feedback\'s unverified design-section point values are not used.','tiny')
+add('<b>Assignment authority:</b> the team-supplied CMPT 376W rubric and design instructions. <b>Design baseline:</b> the unchanged G15_Initial_Design_and_Build_Plan.pdf preserved under the repository\'s 01_Design folder. This PDF describes the revised final design while preserving the original proposal as design-process evidence.','tiny')
 add('<b>ACM source case:</b> <link href="https://www.acm.org/code-of-ethics/case-studies/abusive-workplace-behavior" color="#076C72">Abusive Workplace Behavior</link>. <b>Code:</b> <link href="https://www.acm.org/code-of-ethics" color="#076C72">ACM Code of Ethics and Professional Conduct</link>. <b>Accessible principle index:</b> <link href="https://bw.acm.org/code-of-ethics" color="#076C72">ACM chapter Code of Ethics</link>. Direct automated retrieval of the main case and Code returned HTTP 403 during this build; the case premise is attributed using the supplied handoff. No claim is made to have read a fully retrieved case page or to quote its text.','tiny')
 add('<b>Technical references:</b> <link href="https://twinery.org/reference/en/" color="#076C72">Twine editor reference</link>; <link href="https://twine2.neocities.org/" color="#076C72">Harlowe manual</link>; <link href="https://github.com/iftechfoundation/twine-specs" color="#076C72">IF Technology Foundation Twine/Twee specifications</link>. Local build instructions, runtime license, and actual checks accompany the package.','tiny')
 

@@ -38,18 +38,25 @@ flowchart TD
   Pair -->|"Read the manuscript draft"| Credit
   Solo -->|"Read the manuscript draft"| Credit
   Open -->|"Read the manuscript draft"| Credit
-  Credit -->|"Challenge the decision with contribution records"| Challenge
-  Credit -->|"Talk privately with Eli about support and consent"| Support
-  Credit -->|"Accept the decision for now to avoid another confrontation"| Accept
+  Credit -->|"Request restoration of my authorship"| Challenge
+  Credit -->|"Talk with Eli about support and testimony"| Support
+  Credit -->|"Leave my name off this submission for now"| Accept
+  Credit -->|"Object to treating authorship as a deadline reward"| Challenge
+  Credit -->|"Ask Eli how to respond to the warning"| Support
+  Credit -->|"Keep my byline and avoid challenging the warning"| Accept
+  Credit -->|"Ask for a documented review of the unequal treatment"| Challenge
+  Credit -->|"Speak privately with Eli about what he witnessed"| Support
+  Credit -->|"Keep my byline and say nothing further for now"| Accept
   Challenge -->|"Consider what comes next"| Debrief
-  Support -->|"if not pair: respect refusal; consent=false"| Debrief
-  Support -->|"if pair: accept scoped statement; consent=true"| Debrief
-  Support -->|"if pair: keep statement private; consent=false"| Debrief
+  Support -->|"Solo: refuse named statement; consent=false"| Debrief
+  Support -->|"Open: refuse named statement; consent=false"| Debrief
+  Support -->|"Pair: share authorized statement; consent=true"| Debrief
+  Support -->|"Pair: keep statement private; consent=false"| Debrief
   Accept -->|"Consider what comes next"| Debrief
   Debrief -->|"Hear Priya's options"| Options
   Options -->|"File a factual formal report"| Report
   Options -->|"Request a transfer and plan a safer exit"| Exit
-  Options -->|"Stay and build safer peer practices"| Peers
+  Options -->|"if repair != solo OR supported"| Peers
   Options -->|"Keep working without further action"| Silence
   Report -->|"if documented AND challenged, OR consent"| E1
   Report -->|"otherwise"| E2
@@ -62,6 +69,8 @@ flowchart TD
   E3 -->|"fresh restart"| Intro
   E4 -->|"fresh restart"| Intro
   E5 -->|"fresh restart"| Intro
-  %% Support: after Pair, accept named statement or keep private; otherwise respect refusal.
+  %% Support: after Pair, share authorized statement or keep it private.
+  %% Support: after Solo or Open, respect Eli refusal; no permission to share.
+  %% Peers: available after Pair or Open, or after Solo followed by Support.
   %% Exit: choose factual exit account true or false before E3.
   %% Frame is an automatically rendered header, not a navigable story node.

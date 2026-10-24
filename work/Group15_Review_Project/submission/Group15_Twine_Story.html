@@ -38,28 +38,7 @@ tw-transition-container {animation:none!important;}
 @media (max-width:540px) {tw-story {padding:20px 20px 42px;} .masthead {font-size:.58rem;letter-spacing:.06em;margin-bottom:25px;} h1 {font-size:2.35rem;} blockquote {padding-left:15px;} .reflection,.instructions {padding:17px;} .choices tw-link {padding:14px;} }
 @media (prefers-reduced-motion:reduce) {* {animation:none!important;transition:none!important;}}
 
-/* Context cues: protective actions, uncertain tradeoffs, and heightened risk. */
-.colour-key {font-size:.76rem;line-height:1.7;color:#c8d6df;margin:20px 0;}
-.colour-key span {display:inline-block;margin:7px 9px 7px 0;padding:3px 9px;border-radius:4px;border:1px solid;}
-.key-support {color:#a2e8bc;background:#173e2c;border-color:#69bd8a!important;}
-.key-caution {color:#ffdb9e;background:#44351d;border-color:#d9aa5c!important;}
-.key-risk {color:#ffc2c0;background:#48252c;border-color:#e58d91!important;}
-.choices tw-link {background:var(--choice-bg,#193747);border-color:var(--choice-edge,#547b8c);border-left-width:5px;box-shadow:0 0 18px var(--choice-glow,transparent);}
-.choices tw-link:hover {background:var(--choice-hover,#265464);border-color:var(--choice-edge,#a3e6d7);}
-.choices tw-link::before {content:var(--choice-note,"");display:block;color:var(--choice-edge,#8ed8d1);font-size:.64rem;letter-spacing:.09em;font-weight:700;margin-bottom:3px;}
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(3) tw-link { --choice-bg:#173e2c;--choice-edge:#83d5a2;--choice-hover:#23583c;--choice-glow:rgba(93,204,136,.14);--choice-note:"SUPPORT / PROTECTION";}
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-first"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(1) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(1) tw-link { --choice-bg:#44351d;--choice-edge:#edc17e;--choice-hover:#5d4726;--choice-glow:rgba(234,183,100,.12);--choice-note:"TRADEOFF / UNCERTAINTY";}
-tw-passage[tags~="stage-defect"] .choices > tw-expression:nth-of-type(2) tw-link,
-tw-passage[tags~="stage-credit"] .choices > tw-expression:nth-of-type(3) tw-link,
-tw-passage[tags~="stage-future"] .choices > tw-expression:nth-of-type(4) tw-link { --choice-bg:#48252c;--choice-edge:#f0a0a3;--choice-hover:#66333b;--choice-glow:rgba(236,105,116,.18);--choice-note:"HEIGHTENED RISK";}
+
 
 /* Scene tint is subtle; ending tint fills the screen more clearly. */
 body:has(tw-passage[tags~="tone-risk"]) {background:radial-gradient(ellipse at 90% 0%,#512b36 0,transparent 60%),#151923;}
@@ -85,7 +64,7 @@ tw-passage[tags~="outcome-cost"] {--ending-edge:#ffc0c2;--ending-note:"HARM CONT
 &lt;p class=&quot;deck&quot;&gt;A brilliant lab. A hostile workplace.&lt;br&gt;What are you willing to carry?&lt;/p&gt;
 &lt;p&gt;You are Diane, a new graduate in augmented reality research. Make four major decisions about professional power, technical responsibility, and earned credit. Earlier choices change later conversations and consequences.&lt;/p&gt;
 &lt;div class=&quot;instructions&quot;&gt;&lt;strong&gt;How to play&lt;/strong&gt;&lt;br&gt;Read each scene and select one choice. Use Tab and Enter to navigate by keyboard. Scroll when needed. There is no timer or moral score. Each ending offers a fresh restart. Allow about 10 minutes per route.&lt;/div&gt;
-&lt;div class=&quot;colour-key&quot;&gt;&lt;strong&gt;Reading the colours&lt;/strong&gt;&lt;br&gt;&lt;span class=&quot;key-support&quot;&gt;Green: support or protection&lt;/span&gt; &lt;span class=&quot;key-caution&quot;&gt;Amber: uncertain tradeoffs&lt;/span&gt; &lt;span class=&quot;key-risk&quot;&gt;Red: heightened risk or continuing harm&lt;/span&gt;&lt;br&gt;These cues highlight pressures, not guaranteed results. Every ending still has costs to consider.&lt;/div&gt;
+
 &lt;p class=&quot;small&quot;&gt;Contains workplace humiliation and retaliation. You may close the game at any time.&lt;/p&gt;
 &lt;div class=&quot;choices&quot;&gt;[[Begin Diane's first week-&gt;Offer]]&lt;/div&gt;
 &lt;div class=&quot;credits&quot;&gt;&lt;strong&gt;Based on ACM's &lt;a href=&quot;https://www.acm.org/code-of-ethics/case-studies/abusive-workplace-behavior&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Abusive Workplace Behavior&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;Original adaptation dialogue and fictional reporting process.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Kazi Boni Amin&lt;/strong&gt; - programmer and art designer&lt;br&gt;&lt;strong&gt;Krrish Setia&lt;/strong&gt; - main writer&lt;br&gt;&lt;strong&gt;Andy Wang&lt;/strong&gt; - editor and secondary writer&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Offer" tags="scene" position="500,200" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ARRIVAL / THE OPPORTUNITY&lt;/div&gt;
@@ -134,11 +113,12 @@ tw-passage[tags~="outcome-cost"] {--ending-edge:#ffc0c2;--ending-note:"HARM CONT
 &lt;p&gt;You trace both clocks, fix the boundary condition, and add a regression test. The additional checks move the rehearsal to the following morning. Max complains about the lost afternoon.&lt;/p&gt;
 &lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;We can show the failure and the passing tests. We need both in the review.&quot;&lt;/blockquote&gt;
 &lt;p&gt;Eli leaves his notes open beside yours. For the first time, asking a question has made the room feel larger. The tested repair is ready for the revised rehearsal.&lt;/p&gt;
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;If we can make two-person review a normal practice, I'll help propose a checklist.&quot;&lt;/blockquote&gt;
 &lt;div class=&quot;choices&quot;&gt;[[Read the manuscript draft-&gt;Credit]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="Solo" tags="consequence tone-risk" position="500,850" size="100,100">(set: $repair to &quot;solo&quot;)
 &lt;div class=&quot;eyebrow&quot;&gt;02 / AN UNREVIEWED FIX&lt;/div&gt;
 &lt;h1&gt;The shortcut spreads&lt;/h1&gt;
 &lt;p&gt;You change the conversion without asking Eli. The original movement looks stable, but you have not checked the reset path. At rehearsal the headset reconnects, the tracker stalls, and the scene disappears.&lt;/p&gt;
-&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;You broke the whole thing. Neither of you belongs on that stage.&quot;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;You broke the whole thing. Diane, you're off the demonstration stage.&quot;&lt;/blockquote&gt;
 &lt;p&gt;You own the inadequate review. Max owns the humiliation he directs at you and Eli.&lt;/p&gt;
 &lt;p&gt;The team rolls back your patch. Eli and another engineer reproduce the reset failure with you, then review the revised fix. The demonstration is delayed two days for regression tests. It will use that reviewed build, not your rushed patch.&lt;/p&gt;
 &lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;Next time, ask me. Trying to keep me out of trouble left both of us guessing.&quot;&lt;/blockquote&gt;
@@ -150,56 +130,238 @@ tw-passage[tags~="outcome-cost"] {--ending-edge:#ffc0c2;--ending-note:"HARM CONT
 &lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;The failure is repeatable. Let's review the clock assumptions before assigning blame.&quot;&lt;/blockquote&gt;
 &lt;p&gt;Max talks over you. You did not cause his choice to humiliate Eli. The team now has a shared issue record, and an engineer chairs a focused technical review. The corrected build passes the expanded tests; rehearsal moves by a day.&lt;/p&gt;
 &lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;The defect had to come out. I wish he could hear a problem without making someone the problem.&quot;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;We should make technical reviews safer. I'd help propose a checklist so people can raise problems without being singled out.&quot;&lt;/blockquote&gt;
 &lt;div class=&quot;choices&quot;&gt;[[Read the manuscript draft-&gt;Credit]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Credit" tags="decision stage-credit tone-risk" position="500,1030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;03 / WHO GETS TO SIGN?&lt;/div&gt;
-&lt;h1&gt;The missing names&lt;/h1&gt;
-&lt;p&gt;The draft paper includes your calibration evaluation and Eli's tracking work. Both names have disappeared from the author list.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;After that rehearsal, neither of you has earned a place on this paper.&quot;&lt;/blockquote&gt;&lt;p&gt;The regression required correction. It did not erase the research you had already done.&lt;/p&gt;](else:)[&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;Authors deliver on my schedule. If you hold up the demo, you don't get to stand behind the result.&quot;&lt;/blockquote&gt;&lt;p&gt;The delay made the demonstration more reliable. Max is using credit to punish the people who made the risk visible.&lt;/p&gt;]
-&lt;p&gt;Jean is copied on the draft.&lt;/p&gt;
-&lt;blockquote&gt;&lt;b&gt;Jean&lt;/b&gt;&quot;We cannot reopen every decision before the sponsor presentation. Send the slides.&quot;&lt;/blockquote&gt;
-&lt;p&gt;Eli quietly asks whether you noticed the list. You have time for one immediate response before the next workday.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[Challenge the decision with contribution records-&gt;Challenge]]
-[[Talk privately with Eli about support and consent-&gt;Support]]
-[[Accept the decision for now to avoid another confrontation-&gt;Accept]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Challenge" tags="consequence tone-caution" position="200,1200" size="100,100">(set: $credit to &quot;challenge&quot;, $challenged to true)
-&lt;div class=&quot;eyebrow&quot;&gt;03 / CREDIT IS NOT A REWARD FOR OBEDIENCE&lt;/div&gt;
-&lt;h1&gt;A traceable objection&lt;/h1&gt;
-&lt;p&gt;You send Max and Jean the version history of your evaluation, its use in the paper, and the shared tracking records. You ask for a contribution-based authorship review for both of you. You cite work records you may access, not Eli's private views.&lt;/p&gt;
-&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;You want to argue about names when we should be shipping?&quot;&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;I want the names to reflect the work.&quot;&lt;/blockquote&gt;
-&lt;p&gt;Jean acknowledges receipt but leaves the list unchanged pending discussion. Your objection and the contribution trail are now documented. This establishes an authorship dispute; it does not independently prove every earlier insult.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[Consider what comes next-&gt;Debrief]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Support" tags="consequence tone-support" position="500,1200" size="100,100">(set: $credit to &quot;support&quot;, $supported to true)
-&lt;div class=&quot;eyebrow&quot;&gt;03 / ELI'S DECISION&lt;/div&gt;
+&lt;h1&gt;The manuscript&lt;/h1&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;The draft includes your calibration evaluation and Eli's tracking work. Eli is still listed as an author. Your name is missing.&lt;/p&gt;
+&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;After that rehearsal, you haven't earned a place on this paper.&quot;&lt;/blockquote&gt;
+&lt;p&gt;You caused a regression and needed help correcting it. That does not erase the research you had already contributed.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;The draft lists both you and Eli. Your joint review prevented a failed demonstration, although rehearsal moved to the next morning.&lt;/p&gt;
+&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;Your name stays this time, Diane. Keep making an issue of my deadlines and we will discuss your place on the next paper.&quot;&lt;/blockquote&gt;
+&lt;p&gt;Your current credit is intact. The warning makes future recognition sound conditional on obedience rather than contribution.&lt;/p&gt;
+](else:)[
+&lt;p&gt;The draft lists both you and Eli. The shared issue record shows that you identified the defect and that the reviewed fix prevented a failed demonstration.&lt;/p&gt;
+&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;Next time, bring it to me privately. I don't need my team making me look unprepared.&quot;&lt;/blockquote&gt;
+&lt;p&gt;Your name has not been removed. You must decide whether keeping your own credit is enough when people are still afraid to raise problems.&lt;/p&gt;
+]
+
+&lt;p&gt;In earlier shared drafts you are authorized to access, women colleagues lost bylines after disputes while male coauthors remained. The differences raise a concern about unequal treatment; the contribution records need examination rather than assumptions about who deserved credit.&lt;/p&gt;
+
+&lt;p&gt;Jean is copied on the manuscript and Max's message.&lt;/p&gt;
+&lt;blockquote&gt;&lt;b&gt;Jean&lt;/b&gt;&quot;We need the slides for the sponsor presentation. I don't want another argument about authorship today.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You have time for one immediate response before the next workday.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;div class=&quot;choices&quot;&gt;
+[[Request restoration of my authorship-&gt;Challenge]]
+[[Talk with Eli about support and testimony-&gt;Support]]
+[[Leave my name off this submission for now-&gt;Accept]]
+&lt;/div&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;div class=&quot;choices&quot;&gt;
+[[Object to treating authorship as a deadline reward-&gt;Challenge]]
+[[Ask Eli how to respond to the warning-&gt;Support]]
+[[Keep my byline and avoid challenging the warning-&gt;Accept]]
+&lt;/div&gt;
+](else:)[
+&lt;div class=&quot;choices&quot;&gt;
+[[Ask for a documented review of the unequal treatment-&gt;Challenge]]
+[[Speak privately with Eli about what he witnessed-&gt;Support]]
+[[Keep my byline and say nothing further for now-&gt;Accept]]
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="12" name="Challenge" tags="consequence tone-caution" position="200,1200" size="100,100">(set: $credit to &quot;challenge&quot;, $challenged to true)
+&lt;div class=&quot;eyebrow&quot;&gt;03 / CHALLENGING THE DECISION&lt;/div&gt;
+&lt;h1&gt;A written objection&lt;/h1&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;You send Max and Jean the contribution records for your evaluation. You request restoration of your authorship, acknowledging the regression without accepting that it cancels your earlier research.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;You send Max and Jean the contribution records and ask for written assurance that future authorship will reflect actual research contributions, rather than agreement with Max's deadlines.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You send Max and Jean the shared defect record and relevant manuscript revisions. You request a review of the unequal treatment you noticed, even though your own name remains listed.&lt;/p&gt;
+]
+
+&lt;p&gt;You use records you are authorized to access, not private information belonging to your colleagues.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Max&lt;/b&gt;&quot;You want to argue about authorship when we should be shipping?&quot;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;I want credit to reflect the work, not whether someone agrees with you.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;Jean acknowledges your written objection but postpones addressing the concern. You now have a documented dispute, although no corrective action has been promised.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Consider what comes next-&gt;Debrief]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Support" tags="consequence tone-support" position="500,1200" size="100,100">(set: $credit to &quot;support&quot;, $supported to true)
+&lt;div class=&quot;eyebrow&quot;&gt;03 / ELI'S PERSPECTIVE&lt;/div&gt;
 &lt;h1&gt;Ask before sharing&lt;/h1&gt;
-&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;I can describe what I saw. Is there anything you want to add yourself? I won't pass on this conversation without your permission.&quot;&lt;/blockquote&gt;
-(if: $repair is &quot;pair&quot;)[&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;Working through the tests together helped. I wrote an account of the review and the credit decision. You may give that statement to Priya, with my name. Nothing else from this conversation.&quot;&lt;/blockquote&gt;&lt;p&gt;His permission is specific. You can carry that statement, or leave him to decide whether to send it himself.&lt;/p&gt;&lt;div class=&quot;choices&quot;&gt;(link: &quot;Accept his permission to share that statement&quot;)[(set: $consent to true)(go-to: &quot;Debrief&quot;)]
-(link: &quot;Keep the statement private; he can send it himself&quot;)[(set: $consent to false)(go-to: &quot;Debrief&quot;)]&lt;/div&gt;](else:)[&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;I want my credit back. But I can't risk a statement with my name on it right now. Please keep this conversation between us.&quot;&lt;/blockquote&gt;&lt;p&gt;You agree. He has not given permission to share his private account. That does not prevent you from reporting your own treatment or what you personally witnessed.&lt;/p&gt;&lt;div class=&quot;choices&quot;&gt;[[Respect his boundary and consider next steps-&gt;Debrief]]&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="14" name="Accept" tags="consequence tone-caution" position="800,1200" size="100,100">(set: $credit to &quot;accept&quot;)
+
+&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;I can report what I experienced myself. Would you be comfortable sharing what you witnessed? I won't pass on your words without permission.&quot;&lt;/blockquote&gt;
+
+(if: $repair is &quot;pair&quot;)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;We reviewed the tracker together, but Max still threatened your future authorship. I wrote an account of the review and his warning. You may share that statement with Priya, using my name, but nothing else from our conversation.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;Your earlier cooperation has built enough trust for Eli to authorize a specific statement. You must decide whether to use that permission.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Accept his permission to share that statement&quot;)[(set: $consent to true)(go-to: &quot;Debrief&quot;)]
+(link: &quot;Keep the statement private; he can send it himself&quot;)[(set: $consent to false)(go-to: &quot;Debrief&quot;)]
+&lt;/div&gt;
+](else-if: $repair is &quot;solo&quot;)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;I was upset that you changed my code without asking me. But removing your name from the paper is still unfair. I'm not comfortable giving HR a named statement right now.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;Eli is willing to work with you on better technical review practices, but that does not mean he consents to participating in a formal complaint.&lt;/p&gt;
+
+&lt;p&gt;You respect his decision. You can still report your own treatment and observations.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Respect Eli's refusal and continue-&gt;Debrief]]
+&lt;/div&gt;
+](else:)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;You were right to raise the defect. Max humiliated me, but my name is still on the paper. Seeing what happened to other researchers makes me uncomfortable. I don't want my name attached to an HR statement right now.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;Eli agrees that the team needs better practices for raising technical concerns. However, he does not authorize sharing this private conversation.&lt;/p&gt;
+
+&lt;p&gt;You respect his boundary while retaining the right to report what you witnessed yourself.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Respect Eli's refusal and continue-&gt;Debrief]]
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="14" name="Accept" tags="consequence tone-caution" position="800,1200" size="100,100">(set: $credit to &quot;accept&quot;)
 &lt;div class=&quot;eyebrow&quot;&gt;03 / AN IMMEDIATE COMPROMISE&lt;/div&gt;
 &lt;h1&gt;Send the slides&lt;/h1&gt;
-&lt;p&gt;You send the presentation and do not dispute the author list. You want a reference and another paycheque, and today you cannot face a fresh confrontation.&lt;/p&gt;
-&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;I thought those results were yours too.&quot;&lt;/blockquote&gt;
-&lt;p&gt;You say they are. He returns to his desk. The silence between you has a different weight now. Your work still exists in the repository, but there is no written authorship objection from you and no permission to share a private statement from Eli.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[Consider what comes next-&gt;Debrief]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Debrief" tags="scene" position="500,1400" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;BEFORE THE NEXT DECISION / TAKE STOCK&lt;/div&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;You send the presentation without requesting restoration of your name. The manuscript moves forward with your evaluation included and your authorship omitted.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;Your work is still in that paper. I don't think the rehearsal gives him the right to erase it.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You know that your technical mistake needed correction. But you also know it does not erase the research you completed.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;You send the presentation without challenging Max's warning. Your name remains on this paper, but the threat to your future recognition goes unanswered.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;We fixed the problem together. I don't want asking for review to become something people are afraid to do.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You keep your current credit, although you remain uncertain about the next publication.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You send the presentation without raising the unequal treatment. Your own name remains listed, and the public defect record survives.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;Keeping our names this time doesn't explain what happened to the others.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You recognize the problem but decide against challenging management today.&lt;/p&gt;
+]
+
+&lt;p&gt;You need the salary and a reference. Today you choose not to start another confrontation. You have sent no written authorship objection and have no permission to share a private statement from Eli.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Consider what comes next-&gt;Debrief]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Debrief" tags="scene" position="500,1400" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;BEFORE THE NEXT DECISION / TAKE STOCK&lt;/div&gt;
 &lt;h1&gt;What you can carry&lt;/h1&gt;
-(if: $documented)[&lt;p&gt;You have a dated account of the first outburst. Its value is specificity, not a promise of a finding.&lt;/p&gt;](else-if: $first is &quot;jean&quot;)[&lt;p&gt;You can describe your conversation with Jean from memory, while making clear that you did not record it at the time.&lt;/p&gt;](else:)[&lt;p&gt;You can describe the first outburst from memory. You have not previously told Jean about it.&lt;/p&gt;]
-(if: $challenged)[&lt;p&gt;Your written authorship objection links directly to the contribution history. Jean has not corrected the list.&lt;/p&gt;](else-if: $supported)[&lt;p&gt;You listened to Eli without treating him as evidence to collect.&lt;/p&gt;](else:)[&lt;p&gt;You have not challenged the credit decision. The list still excludes both of you.&lt;/p&gt;]
-(if: $consent)[&lt;p&gt;Eli has authorized sharing his named statement with Priya only. That permission is not permission to circulate it through the lab.&lt;/p&gt;](else:)[&lt;p&gt;You have no permission to share a private statement from Eli. Your own observations remain yours to report.&lt;/p&gt;]
-&lt;p&gt;Priya, an HR adviser outside Jean's reporting line, has a slot for an options conversation. You decide to hear the process before choosing a longer-term response.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[Hear Priya's options-&gt;Options]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Options" tags="decision stage-future tone-caution" position="500,1580" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / THE LONGER VIEW&lt;/div&gt;
+
+(if: $documented)[
+&lt;p&gt;You have a dated record of Max's first outburst, including what happened and who witnessed it.&lt;/p&gt;
+](else-if: $first is &quot;jean&quot;)[
+&lt;p&gt;You can describe Jean's dismissal of your concerns, although you did not record the conversation at the time.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You remember the first outburst, but you have not previously reported or documented it.&lt;/p&gt;
+]
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;Your rushed repair caused a regression that was later corrected. Max removed your authorship, while Eli remained credited.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;Your joint repair succeeded after additional testing. Both names remain on the manuscript, but Max threatened your future credit.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your public defect report resulted in a reviewed repair. Both names remain on the manuscript, although Max's intimidation and the concern about unequal treatment remain.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your written objection is documented, but Jean has not addressed the authorship concern.&lt;/p&gt;
+](else-if: $supported)[
+&lt;p&gt;You spoke privately with Eli and respected his boundaries regarding what can be shared.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You have not submitted a written objection about Max's treatment of research credit.&lt;/p&gt;
+]
+
+(if: $consent)[
+&lt;p&gt;Eli authorized sharing his specific named statement with Priya. His permission does not extend to other conversations.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You have no permission to share a private statement from Eli. You can still report your own experiences and observations.&lt;/p&gt;
+]
+
+&lt;p&gt;Priya, an HR adviser outside Jean's reporting line, offers to explain your options before you decide how to proceed.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Hear Priya's options-&gt;Options]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Options" tags="decision stage-future tone-caution" position="500,1580" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / THE LONGER VIEW&lt;/div&gt;
 &lt;h1&gt;No guaranteed ending&lt;/h1&gt;
-&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;This conversation isn't a formal complaint. If you file one, separate your experience, what you witnessed, and what others have authorized you to share. We may need to disclose relevant details to examine it fairly. I can't promise secrecy or a particular finding.&quot;&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;And while that happens?&quot;&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;We can discuss temporary reporting arrangements and vacancies elsewhere. Report any retaliation. Neither a transfer nor a review makes the lab's problems disappear. You can also return to this process later.&quot;&lt;/blockquote&gt;
-&lt;p&gt;These are options at this fictional company. You have not yet filed a complaint. You weigh the opportunity, your well-being, and what you can change for the people still in the lab.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[File a factual formal report-&gt;Report]]
+
+&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;This conversation is not a formal complaint. You can report what you experienced, but an investigation may require speaking with other people. I cannot promise confidentiality or a particular result.&quot;&lt;/blockquote&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Diane&lt;/b&gt;&quot;What happens while the investigation takes place?&quot;&lt;/blockquote&gt;
+
+&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;We can discuss temporary reporting arrangements or vacancies outside Max's team. You can also decide to continue working, although that will not automatically resolve the workplace problems.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You must now choose how to respond to the situation.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[File a factual formal report-&gt;Report]]
 [[Request a transfer and plan a safer exit-&gt;Exit]]
+
+(if: $repair is &quot;pair&quot; or $repair is &quot;open&quot; or $supported is true)[
 [[Stay and build safer peer practices-&gt;Peers]]
-[[Keep working without further action-&gt;Silence]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Report" tags="response tone-caution" position="50,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / PUTTING AN ACCOUNT ON RECORD&lt;/div&gt;
+]
+
+[[Keep working without further action-&gt;Silence]]
+&lt;/div&gt;
+
+(if: $repair is &quot;solo&quot; and $supported is false)[
+&lt;p class=&quot;small&quot;&gt;A joint peer initiative is not currently available. After the rushed repair, you and Eli have not rebuilt enough cooperation to propose it together. You can still report the situation, request a transfer, or continue working.&lt;/p&gt;
+]</tw-passagedata><tw-passagedata pid="17" name="Report" tags="response tone-caution" position="50,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / PUTTING AN ACCOUNT ON RECORD&lt;/div&gt;
 &lt;h1&gt;The scope of the report&lt;/h1&gt;
-&lt;p&gt;You report your own treatment, the events you witnessed, and the removal of earned credit. You distinguish recollection from records.&lt;/p&gt;
-(if: $documented)[&lt;p&gt;You attach the dated outburst note and relevant messages.&lt;/p&gt;](else:)[&lt;p&gt;You label the outburst account as a later recollection, not a contemporaneous record.&lt;/p&gt;]
-(if: $challenged)[&lt;p&gt;You include the acknowledged authorship objection and contribution history.&lt;/p&gt;](else:)[&lt;p&gt;You identify the shared work history for the reviewer to examine. You do not claim to have sent an earlier authorship objection.&lt;/p&gt;]
-(if: $consent)[&lt;p&gt;You give Priya only Eli's authorized statement. She contacts him directly about its scope before relying on it.&lt;/p&gt;](else:)[&lt;p&gt;You include no private statement from Eli. Priya accepts your report without requiring him to participate.&lt;/p&gt;]
-&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;I'll arrange a reviewer outside this management chain. We will distinguish what we can establish from what remains unsettled.&quot;&lt;/blockquote&gt;
-(if: ($documented and $challenged) or $consent)[&lt;div class=&quot;choices&quot;&gt;[[Follow the review over the next six weeks-&gt;E1]]&lt;/div&gt;](else:)[&lt;div class=&quot;choices&quot;&gt;[[Follow the review over the next six weeks-&gt;E2]]&lt;/div&gt;]</tw-passagedata><tw-passagedata pid="18" name="Exit" tags="response tone-support" position="350,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / A BOUNDARY&lt;/div&gt;
+
+&lt;p&gt;You file a formal report with Priya describing Max's treatment of employees, the incidents you witnessed, and your concerns about how he uses research credit.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;You explain that your rushed repair caused a regression, which the team corrected. You also explain that Max removed your name from research you had already contributed, while Eli remained credited.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;You explain that the joint repair was successful but Max threatened your future authorship. Your name remains on the current manuscript.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You explain that raising the defect publicly led to Max humiliating Eli. Both of you retained authorship, but you also raise concerns about the unequal treatment of women researchers.&lt;/p&gt;
+]
+
+(if: $documented)[
+&lt;p&gt;You attach your dated account of the first outburst and relevant messages.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You describe the first outburst from memory and clearly identify it as a later recollection.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;You attach your acknowledged written objection and the relevant contribution records.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You identify the work records that a reviewer could examine. You do not claim to have made an earlier written objection.&lt;/p&gt;
+]
+
+(if: $consent)[
+&lt;p&gt;You provide only the specific statement Eli authorized you to share. Priya will confirm its scope with him directly.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You do not share Eli's private conversation or imply that he agreed to participate. Priya accepts your report based on your own account.&lt;/p&gt;
+]
+
+&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;An independent reviewer will examine the information available. We may need to interview other employees, and I cannot guarantee a particular finding.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;The outcome depends on what the review can establish. Filing a report does not guarantee that management will be held accountable.&lt;/p&gt;
+
+(if: ($documented and $challenged) or $consent)[
+&lt;div class=&quot;choices&quot;&gt;
+[[Follow the review over the next six weeks-&gt;E1]]
+&lt;/div&gt;
+](else:)[
+&lt;div class=&quot;choices&quot;&gt;
+[[Follow the review over the next six weeks-&gt;E2]]
+&lt;/div&gt;
+]</tw-passagedata><tw-passagedata pid="18" name="Exit" tags="response tone-support" position="350,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / A BOUNDARY&lt;/div&gt;
 &lt;h1&gt;Leave the reporting line&lt;/h1&gt;
 &lt;p&gt;A testing vacancy in another group offers a transfer after a handover. It is less prestigious than this research post, but it keeps your salary. If the transfer falls through, you will search while employed instead of betting your rent on an immediate departure.&lt;/p&gt;
 &lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;I can ask that the transfer be handled outside Jean's team. An exit account would record your concerns, but it would not automatically start the full review you declined today.&quot;&lt;/blockquote&gt;
@@ -207,52 +369,240 @@ tw-passage[tags~="outcome-cost"] {--ending-edge:#ffc0c2;--ending-note:"HARM CONT
 &lt;div class=&quot;choices&quot;&gt;(link: &quot;Leave a factual exit account and transfer&quot;)[(set: $exitAccount to true)(go-to: &quot;E3&quot;)]
 (link: &quot;Transfer without an exit account&quot;)[(set: $exitAccount to false)(go-to: &quot;E3&quot;)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Peers" tags="response tone-support" position="650,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / WORK WITHIN REACH&lt;/div&gt;
 &lt;h1&gt;A smaller circle of influence&lt;/h1&gt;
-&lt;p&gt;You propose two-person review, a shared defect log, and a contribution ledger before the next paper. You do not circulate private accounts of abuse.&lt;/p&gt;
-(if: $repair is &quot;pair&quot;)[&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;We already know reviewing together helps. Let's make it normal instead of a favour.&quot;&lt;/blockquote&gt;](else-if: $repair is &quot;solo&quot;)[&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;I'll help if review is a requirement. We cannot keep repairing things in secret because we're afraid to ask.&quot;&lt;/blockquote&gt;](else:)[&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;Keep the failures visible, but keep the review about the work. That's the rule I want.&quot;&lt;/blockquote&gt;]
-(if: $supported)[&lt;p&gt;Because you respected his boundary, Eli agrees to help draft the review checklist.&lt;/p&gt;](else:)[&lt;p&gt;Eli agrees to try the checklist for one sprint. You will need to earn his confidence beyond a single meeting.&lt;/p&gt;]
-&lt;p&gt;Jean permits the trial because it may reduce missed deadlines. She declines to reconsider Max's authority.&lt;/p&gt;
-&lt;div class=&quot;choices&quot;&gt;[[See what changes after one month-&gt;E4]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Silence" tags="response tone-risk" position="950,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / THE NEXT MILESTONE&lt;/div&gt;
+
+&lt;p&gt;You propose two-person code review, a shared defect log, and a contribution ledger to improve how the research team works.&lt;/p&gt;
+
+(if: $repair is &quot;pair&quot;)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;We already worked well together. Let's make reviewing changes a standard process instead of relying on individual favours.&quot;&lt;/blockquote&gt;
+](else-if: $repair is &quot;solo&quot;)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;I was frustrated when you changed my code without asking. But we've talked about it, and I agree that a proper review process could prevent this from happening again.&quot;&lt;/blockquote&gt;
+](else:)[
+&lt;blockquote&gt;&lt;b&gt;Eli&lt;/b&gt;&quot;When you raised the defect publicly, Max made it personal. We need a process that makes technical criticism normal instead of something people fear.&quot;&lt;/blockquote&gt;
+]
+
+(if: $supported)[
+&lt;p&gt;Your earlier private conversation helped establish trust. Eli agrees to work with you on the checklist, while maintaining his boundaries about sharing personal statements.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Eli follows through on the technical cooperation you discussed earlier. That agreement does not give you permission to share his private experiences.&lt;/p&gt;
+]
+
+&lt;blockquote&gt;&lt;b&gt;Jean&lt;/b&gt;&quot;If this helps reduce delays, you can try it for one sprint. But I don't want it interfering with Max's leadership.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;The team begins using the new review practices. They may improve technical reliability, but they do not directly resolve the workplace harassment or research-credit concerns.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[See what changes after one month-&gt;E4]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="Silence" tags="response tone-risk" position="950,1780" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;04 / THE NEXT MILESTONE&lt;/div&gt;
 &lt;h1&gt;Keep delivering&lt;/h1&gt;
-&lt;p&gt;You decide against a formal complaint, a transfer, or a peer initiative for now. The decision protects your immediate place on the project. It does not give Max permission to mistreat people.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;p&gt;The demo uses the reviewed replacement patch after the two-day delay. Your original regression is gone because the team tested and corrected it.&lt;/p&gt;](else-if: $repair is &quot;pair&quot;)[&lt;p&gt;The demo uses the fix you reviewed with Eli after the rehearsal moved by a morning.&lt;/p&gt;](else:)[&lt;p&gt;The demo uses the tested fix from the public technical review after the one-day schedule change.&lt;/p&gt;]
-&lt;div class=&quot;choices&quot;&gt;[[Watch the sponsor presentation-&gt;E5]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="E1" tags="ending outcome-good" position="50,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 1 OF 5 / ACCOUNTABILITY BEGINS&lt;/div&gt;
+
+&lt;p&gt;You decide against filing a formal complaint, requesting a transfer, or starting a peer initiative for now. You want to preserve your immediate position on the research team.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;The sponsor demonstration uses the corrected and reviewed build after a two-day delay. Your rushed patch was replaced, but the manuscript still excludes your name.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;The demonstration uses the fix you developed with Eli. Both of you retain authorship, but Max's warning about your future recognition remains unanswered.&lt;/p&gt;
+](else:)[
+&lt;p&gt;The demonstration uses the fix from the public technical review. Both names remain on the paper, but employees are still reluctant to raise problems around Max.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your earlier written objection remains on record, but you decide not to pursue it further today.&lt;/p&gt;
+](else-if: $supported)[
+&lt;p&gt;You maintain your relationship with Eli, although neither of you takes additional action against management.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You avoid further confrontation. Your concerns remain unresolved, even though the work continues.&lt;/p&gt;
+]
+
+&lt;p&gt;The demonstration may succeed, but technical success does not necessarily mean the workplace is ethical or safe.&lt;/p&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+[[Watch the sponsor presentation-&gt;E5]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="E1" tags="ending outcome-good" position="50,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 1 OF 5 / ACCOUNTABILITY BEGINS&lt;/div&gt;
 &lt;h1&gt;A door opens slowly&lt;/h1&gt;
-(if: $consent)[&lt;p&gt;The reviewer checks Eli's authorized statement against the shared work history and your account. The accounts corroborate the use of humiliation and credit as pressure.&lt;/p&gt;](else:)[&lt;p&gt;Your dated notes and acknowledged authorship objection let the reviewer trace the sequence. In a separate interview, Jean confirms she deferred your written authorship objection instead of addressing the use of credit as punishment. Eli has not supplied a private statement.&lt;/p&gt;]
-&lt;p&gt;The authorship review restores both earned credits. An experienced interim supervisor takes over daily reviews while Max's conduct and Jean's response are examined. You are not asked to replace Max.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;p&gt;The technical record still includes your rushed regression, its rollback, and the two-day correction. Accountability does not erase the work you needed to improve.&lt;/p&gt;](else:)[&lt;p&gt;The tested repair remains part of the record: reliable work required review, not humiliation.&lt;/p&gt;]
-&lt;p&gt;The next research milestone moves while supervision changes. Some colleagues are relieved; others are guarded. A revised reporting process is promised, but you will judge it by whether people can use it.&lt;/p&gt;
-&lt;div class=&quot;reflection&quot;&gt;&lt;h2&gt;What this route asks&lt;/h2&gt;&lt;p&gt;Your specific account made scrutiny possible in this story; it was not a formula guaranteeing justice. ACM 1.5 supports recognizing actual contributions. Principles 3.3 and 3.4 connect leadership to working conditions and effective ethical processes. What would show that this change lasts after the reviewer leaves?&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;choices&quot;&gt;(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="E2" tags="ending outcome-mixed" position="250,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 2 OF 5 / REVIEW UNRESOLVED&lt;/div&gt;
+
+(if: $consent)[
+&lt;p&gt;The independent reviewer examines Eli's authorized statement alongside the shared work records and your own account. His statement corroborates Max's use of threats against employees who question his decisions.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your dated account and acknowledged written objection allow the reviewer to trace the sequence of events. In a separate interview, Jean confirms that she postponed addressing your documented concern rather than intervening.&lt;/p&gt;
+]
+
+&lt;p&gt;The investigation finds that Max used his position to intimidate employees and that Jean failed to respond appropriately to reported concerns.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;The authorship review restores your name to the manuscript. Eli's existing authorship is preserved. Your earlier regression remains documented as a technical mistake, but it cannot justify erasing completed research.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;Your name and Eli's remain on the manuscript. The company formally rejects Max's threat to withhold future research credit based on disagreement with his management decisions.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your name and Eli's remain on the manuscript. The review also identifies concerns about unequal treatment in previous authorship decisions, prompting a separate examination of contribution records.&lt;/p&gt;
+]
+
+&lt;p&gt;An experienced interim supervisor assumes responsibility for daily technical reviews while Max's conduct and Jean's response are investigated further.&lt;/p&gt;
+
+&lt;p&gt;The changes delay the next research milestone. Some employees are relieved, but others remain cautious about whether the new procedures will last.&lt;/p&gt;
+
+&lt;div class=&quot;reflection&quot;&gt;
+&lt;h2&gt;What this route asks&lt;/h2&gt;
+&lt;p&gt;Accountability became possible through available evidence and an independent review, but the outcome was not guaranteed. ACM principles 1.5, 3.3, and 3.4 emphasize recognizing contributions and leadership responsibility. What would demonstrate that the workplace has genuinely improved?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="E2" tags="ending outcome-mixed" position="250,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 2 OF 5 / REVIEW UNRESOLVED&lt;/div&gt;
 &lt;h1&gt;An open file&lt;/h1&gt;
-&lt;p&gt;The reviewer can trace contributions but cannot yet settle all the accounts of Max's conduct. Interviews conflict, and some colleagues will not speak on the record. The paper's author list remains under review.&lt;/p&gt;
-(if: $documented)[&lt;p&gt;Your dated account gives the reviewer a clear starting point. Without an earlier authorship objection or an authorized corroborating statement, more inquiry is needed in this route.&lt;/p&gt;](else-if: $challenged)[&lt;p&gt;Your written objection supports the credit dispute. It does not, by itself, establish everything that happened in earlier meetings.&lt;/p&gt;](else:)[&lt;p&gt;Your recollection is part of the record. The reviewer still needs to compare it with other information.&lt;/p&gt;]
-&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;Unresolved does not mean false. We'll keep the review open. For now, your work will be reviewed by a supervisor outside Max's line.&quot;&lt;/blockquote&gt;
-&lt;p&gt;You keep your salary and gain some distance. You still do not know when, or whether, the remaining findings will arrive.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;p&gt;The demo has used the corrected, reviewed build after the two-day delay. That technical resolution has not resolved the workplace complaint.&lt;/p&gt;](else:)[&lt;p&gt;The team's reviewed repair has stabilized the demo. A working prototype cannot settle how people were treated.&lt;/p&gt;]
-&lt;div class=&quot;reflection&quot;&gt;&lt;h2&gt;What this route asks&lt;/h2&gt;&lt;p&gt;ACM 1.2 supports reducing harm while uncertainty remains; 3.4 asks whether organizational processes make ethical commitments effective. Eli's silence does not disqualify your account. What support should be available before a final finding?&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;choices&quot;&gt;(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="E3" tags="ending outcome-safe" position="500,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 3 OF 5 / A SAFER EXIT&lt;/div&gt;
+
+&lt;p&gt;An independent reviewer examines your report, but the available evidence does not resolve every allegation. Some interviews conflict, and several employees are unwilling to speak on the record.&lt;/p&gt;
+
+(if: $documented)[
+&lt;p&gt;Your dated account provides a useful starting point, but additional corroboration is needed to establish the full sequence of events.&lt;/p&gt;
+](else-if: $first is &quot;jean&quot;)[
+&lt;p&gt;You explain Jean's dismissal of your concerns from memory. Without a contemporaneous record, the reviewer must examine other accounts before reaching a conclusion.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You describe the first outburst from memory. The reviewer accepts your account for consideration but has not yet established what happened through additional evidence.&lt;/p&gt;
+]
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;Your authorship has not yet been restored. Eli remains credited, while the removal of your name is still under examination.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;Your name remains on the manuscript, but Max's threat regarding future authorship remains unresolved.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your name and Eli's remain on the paper. However, the concerns about intimidation and unequal treatment of other researchers have not been fully resolved.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your written objection is part of the review. It supports the existence of a dispute but does not independently establish every allegation about Max's conduct.&lt;/p&gt;
+](else-if: $supported)[
+&lt;p&gt;Your conversation with Eli helped you understand another perspective, but you respect his decision about what can be shared.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You have not submitted a separate written objection concerning authorship, leaving the reviewer to examine the available work records.&lt;/p&gt;
+]
+
+&lt;blockquote&gt;&lt;b&gt;Priya&lt;/b&gt;&quot;An unresolved finding does not mean your experience was false. The review remains open, and we can arrange temporary supervision outside Max's reporting line.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;You keep your salary and receive some distance from Max. The technical demonstration proceeds using a reviewed repair, but the workplace investigation remains unfinished.&lt;/p&gt;
+
+&lt;div class=&quot;reflection&quot;&gt;
+&lt;h2&gt;What this route asks&lt;/h2&gt;
+&lt;p&gt;ACM principles 1.2 and 3.4 emphasize minimizing harm and establishing effective ethical processes. How should an organization protect employees while allegations remain unresolved?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="E3" tags="ending outcome-safe" position="500,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 3 OF 5 / A SAFER EXIT&lt;/div&gt;
 &lt;h1&gt;A different badge reader&lt;/h1&gt;
-&lt;p&gt;The transfer goes through after a two-week handover. You trade the famous lab for a testing team where questions are part of the job. The lost research opportunity hurts. So does realizing how much energy went into anticipating Max's mood.&lt;/p&gt;
-(if: $exitAccount)[&lt;p&gt;Your factual exit account remains with Priya. You requested no full investigation through that account, and none is promised.&lt;/p&gt;](else:)[&lt;p&gt;You leave no exit account. The transfer documents a staffing change, not your reasons for wanting distance.&lt;/p&gt;]
-(if: $challenged)[&lt;p&gt;Your authorship objection is still pending. You retain the permitted contribution records and ask for a contact outside the lab to follow it up.&lt;/p&gt;](else:)[&lt;p&gt;The old paper still omits your name. Leaving has not automatically restored earned credit.&lt;/p&gt;]
-(if: $supported)[&lt;p&gt;You tell Eli how to reach you. You keep his private conversation private in your new team.&lt;/p&gt;](else:)[&lt;p&gt;You send Eli the technical handover. You do not assume he wants advice about leaving.&lt;/p&gt;]
-&lt;p&gt;Max still leads the old group. Protecting your well-being has not fixed its leadership.&lt;/p&gt;
-&lt;div class=&quot;reflection&quot;&gt;&lt;h2&gt;What this route asks&lt;/h2&gt;&lt;p&gt;ACM 1.2 makes reducing harm relevant to your own well-being too. Principle 3.3 places responsibility for working conditions on leadership. A boundary can be defensible even when others remain exposed. What responsibility can you carry without surrendering that boundary?&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;choices&quot;&gt;(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="E4" tags="ending outcome-progress" position="750,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 4 OF 5 / LOCAL PROGRESS&lt;/div&gt;
+
+&lt;p&gt;Your transfer is approved following a two-week handover. You leave the prestigious AR research team for another technical group where questions and code reviews are encouraged.&lt;/p&gt;
+
+&lt;p&gt;You retain your salary, but you lose the opportunity to continue working directly on Max's high-profile research. The decision protects your immediate well-being without resolving every problem in the original team.&lt;/p&gt;
+
+(if: $exitAccount)[
+&lt;p&gt;You leave Priya a factual account describing your own experiences and the concerns you witnessed. The account is retained, although it does not automatically initiate a full investigation.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You choose not to submit an exit account. Your transfer is recorded as a staffing change without formally documenting your reasons for leaving.&lt;/p&gt;
+]
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;The manuscript still excludes your name while retaining Eli's. Transferring has not automatically restored your research credit.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;Your name remains on the manuscript. Max's warning about future authorship is no longer an immediate concern in your new role, but it remains unresolved for those who continue working under him.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your name remains on the manuscript. The concerns about unequal treatment of other researchers remain unresolved within the original team.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your written objection remains pending. You retain the permitted contribution records and ask for a contact outside the original team who can follow up.&lt;/p&gt;
+](else-if: $supported)[
+&lt;p&gt;You tell Eli how to reach you while keeping his private conversation confidential. He appreciates having someone outside the team who understands the situation.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You provide Eli with the necessary technical handover without assuming that he wants to make the same career decision.&lt;/p&gt;
+]
+
+&lt;p&gt;Max continues leading the original team. Leaving has improved your circumstances, but it has not changed the environment for everyone else.&lt;/p&gt;
+
+&lt;div class=&quot;reflection&quot;&gt;
+&lt;h2&gt;What this route asks&lt;/h2&gt;
+&lt;p&gt;ACM principles 1.2 and 3.3 highlight minimizing harm and leadership responsibility. Is choosing personal safety an adequate response when others remain exposed to harmful workplace behaviour?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="E4" tags="ending outcome-progress" position="750,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 4 OF 5 / LOCAL PROGRESS&lt;/div&gt;
 &lt;h1&gt;A better review table&lt;/h1&gt;
-&lt;p&gt;One month later, a second pair of eyes catches a reset error before rehearsal. The defect log records the assumption and fix, not an engineer's supposed worth.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;p&gt;The checklist includes the reset test missing from your rushed repair. Your mistake has become a useful lesson without becoming a licence to humiliate you.&lt;/p&gt;](else:)[&lt;p&gt;The team has turned the reviewed repair into a repeatable practice rather than a one-off rescue.&lt;/p&gt;]
-(if: $challenged)[&lt;p&gt;The new contribution ledger supports your existing objection, but Jean has still not corrected the old manuscript.&lt;/p&gt;](else:)[&lt;p&gt;The contribution ledger makes future work easier to trace. It does not correct the names on the old paper.&lt;/p&gt;]
-&lt;p&gt;Eli asks questions more readily in the peer sessions. When Max enters, the conversation still tightens. Jean calls the checklist a productivity improvement and avoids discussing why people were afraid to ask for help.&lt;/p&gt;
-&lt;div class=&quot;reflection&quot;&gt;&lt;h2&gt;What this route asks&lt;/h2&gt;&lt;p&gt;ACM 2.4 supports constructive professional review; 2.6 supports recognizing when you need help. You reduced technical and interpersonal risk within reach. Principles 3.3 and 3.4 expose the limit: peer care cannot substitute for accountable leadership. What would make these practices safe when Max objects?&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;choices&quot;&gt;(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="E5" tags="ending outcome-cost" position="1000,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 5 OF 5 / SUCCESS WITH A COST&lt;/div&gt;
+
+&lt;p&gt;One month later, your team has introduced two-person code reviews, a shared defect log, and a contribution ledger for upcoming research papers.&lt;/p&gt;
+
+&lt;p&gt;A colleague identifies a reset error during review before it can affect the next demonstration. The problem is corrected without publicly humiliating the engineer responsible.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;Your earlier rushed repair helped demonstrate why shared review procedures matter. Working with Eli after your disagreement has improved your technical collaboration.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;The successful review you completed with Eli has become a repeatable process rather than an exception. Employees are more willing to ask one another for help.&lt;/p&gt;
+](else:)[
+&lt;p&gt;The public defect report demonstrated the value of making technical failures visible. The new procedures encourage employees to discuss problems without focusing on personal blame.&lt;/p&gt;
+]
+
+(if: $supported)[
+&lt;p&gt;Your earlier conversation with Eli helped build trust. He continues supporting the checklist while keeping control over whether his personal experiences are shared.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Eli follows through on his earlier agreement to cooperate. The technical initiative does not require him to provide a personal statement about Max.&lt;/p&gt;
+]
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;Your name is still missing from the earlier manuscript, although the new contribution ledger may help prevent similar disputes in future work.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;Your current authorship is intact. However, Max's warning about future credit has not been formally withdrawn.&lt;/p&gt;
+](else:)[
+&lt;p&gt;Your current authorship is intact, but concerns about unequal treatment in earlier research papers remain unresolved.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your written objection remains unanswered despite the improvements in technical procedures.&lt;/p&gt;
+]
+
+&lt;p&gt;Jean supports the review checklist because it improves productivity, but she refuses to reconsider Max's authority. Employees still become uncomfortable when he enters the room.&lt;/p&gt;
+
+&lt;div class=&quot;reflection&quot;&gt;
+&lt;h2&gt;What this route asks&lt;/h2&gt;
+&lt;p&gt;ACM principles 2.4 and 2.6 encourage constructive professional review and recognizing when assistance is needed. Principles 3.3 and 3.4 remind us that technical improvements cannot replace ethical leadership. How much can employees change without support from management?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="E5" tags="ending outcome-cost" position="1000,2030" size="100,100">&lt;div class=&quot;eyebrow&quot;&gt;ENDING 5 OF 5 / SUCCESS WITH A COST&lt;/div&gt;
 &lt;h1&gt;The applause is real&lt;/h1&gt;
-&lt;p&gt;The bridge holds steady. The sponsor applauds. Funding continues, and so does your pay. Max presents the result as proof of his standards.&lt;/p&gt;
-(if: $repair is &quot;solo&quot;)[&lt;p&gt;The applause comes two days later than planned, after rollback, peer review, and new tests. It does not validate the rushed patch or the tirade.&lt;/p&gt;](else-if: $repair is &quot;pair&quot;)[&lt;p&gt;Your shared review made this reliable demonstration possible. The presentation never mentions the morning it cost.&lt;/p&gt;](else:)[&lt;p&gt;The public defect report and reviewed fix prevented a visible failure. Max takes credit for the corrected result.&lt;/p&gt;]
-(if: $challenged)[&lt;p&gt;Jean has acknowledged your authorship objection but has not acted on it. Leaving it unanswered has become another way to preserve the existing list.&lt;/p&gt;](else-if: $supported)[&lt;p&gt;Eli thanks you for listening. His name, like yours, is still missing from the paper.&lt;/p&gt;](else:)[&lt;p&gt;Your unchallenged omission becomes the circulated author list. Eli stops volunteering for presentation work.&lt;/p&gt;]
-&lt;p&gt;You edit tomorrow's question three times before sending it. A successful demonstration has not made this a safe place to learn.&lt;/p&gt;
-&lt;div class=&quot;reflection&quot;&gt;&lt;h2&gt;What this route asks&lt;/h2&gt;&lt;p&gt;Your need for stability was real, and Max remains responsible for his conduct. ACM 1.4 connects fairness to resisting abuse of power; 1.5 connects recognition to actual work. What does a team lose when people must choose between visible success and speaking honestly?&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;choices&quot;&gt;(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Frame" tags="header" position="1200,50" size="100,100">&lt;div class=&quot;masthead&quot;&gt;&lt;span&gt;THE PRICE OF PRESTIGE&lt;/span&gt;&lt;span&gt;GROUP 15 / AR LAB&lt;/span&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
+
+&lt;p&gt;The virtual bridge remains stable throughout the sponsor presentation. The demonstration succeeds, and the research team secures continued funding.&lt;/p&gt;
+
+&lt;p&gt;Max presents the result as proof that his demanding leadership produces success. The audience applauds without knowing what happened behind the scenes.&lt;/p&gt;
+
+(if: $repair is &quot;solo&quot;)[
+&lt;p&gt;The demonstration succeeds after the team rolls back your rushed patch and completes two days of additional review and testing.&lt;/p&gt;
+&lt;p&gt;Your name remains excluded from the manuscript even though your earlier research is included. Eli retains his authorship.&lt;/p&gt;
+](else-if: $repair is &quot;pair&quot;)[
+&lt;p&gt;The joint repair you completed with Eli makes the demonstration possible after a short delay for additional testing.&lt;/p&gt;
+&lt;p&gt;Both of you retain authorship, but Max's threat about future recognition remains unanswered.&lt;/p&gt;
+](else:)[
+&lt;p&gt;The public defect report prevented a visible failure. The revised build passes testing after a one-day delay.&lt;/p&gt;
+&lt;p&gt;Both you and Eli retain authorship, but the unequal treatment of other researchers remains unresolved.&lt;/p&gt;
+]
+
+(if: $challenged)[
+&lt;p&gt;Your written objection remains on record, but Jean has not taken meaningful action. The successful presentation gives management another reason to avoid the dispute.&lt;/p&gt;
+](else-if: $supported)[
+&lt;p&gt;Eli appreciates that you listened and respected his boundaries. Nevertheless, the two of you continue working in an environment where speaking openly feels risky.&lt;/p&gt;
+](else:)[
+&lt;p&gt;You have not challenged the unfair conduct in writing. You continue to worry about whether another disagreement will threaten your professional opportunities.&lt;/p&gt;
+]
+
+&lt;p&gt;Your salary and prestigious position are secure for now. However, you hesitate before asking your next technical question. A successful product has not created a safe workplace.&lt;/p&gt;
+
+&lt;div class=&quot;reflection&quot;&gt;
+&lt;h2&gt;What this route asks&lt;/h2&gt;
+&lt;p&gt;ACM principles 1.4 and 1.5 emphasize fairness and appropriate recognition of professional contributions. Can a research team be considered successful when employees fear speaking honestly and management uses professional opportunities as leverage?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;choices&quot;&gt;
+(link: &quot;Restart with a fresh set of choices&quot;)[(restart:)]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Frame" tags="header" position="1200,50" size="100,100">&lt;div class=&quot;masthead&quot;&gt;&lt;span&gt;THE PRICE OF PRESTIGE&lt;/span&gt;&lt;span&gt;GROUP 15 / AR LAB&lt;/span&gt;&lt;/div&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

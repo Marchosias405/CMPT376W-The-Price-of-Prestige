@@ -206,17 +206,47 @@
     {
       "from": "Credit",
       "to": "Challenge",
-      "label": "Challenge the decision with contribution records"
+      "label": "Request restoration of my authorship"
     },
     {
       "from": "Credit",
       "to": "Support",
-      "label": "Talk privately with Eli about support and consent"
+      "label": "Talk with Eli about support and testimony"
     },
     {
       "from": "Credit",
       "to": "Accept",
-      "label": "Accept the decision for now to avoid another confrontation"
+      "label": "Leave my name off this submission for now"
+    },
+    {
+      "from": "Credit",
+      "to": "Challenge",
+      "label": "Object to treating authorship as a deadline reward"
+    },
+    {
+      "from": "Credit",
+      "to": "Support",
+      "label": "Ask Eli how to respond to the warning"
+    },
+    {
+      "from": "Credit",
+      "to": "Accept",
+      "label": "Keep my byline and avoid challenging the warning"
+    },
+    {
+      "from": "Credit",
+      "to": "Challenge",
+      "label": "Ask for a documented review of the unequal treatment"
+    },
+    {
+      "from": "Credit",
+      "to": "Support",
+      "label": "Speak privately with Eli about what he witnessed"
+    },
+    {
+      "from": "Credit",
+      "to": "Accept",
+      "label": "Keep my byline and say nothing further for now"
     },
     {
       "from": "Challenge",
@@ -226,7 +256,12 @@
     {
       "from": "Support",
       "to": "Debrief",
-      "label": "Respect his boundary and consider next steps"
+      "label": "Respect Eli's refusal and continue"
+    },
+    {
+      "from": "Support",
+      "to": "Debrief",
+      "label": "Respect Eli's refusal and continue"
     },
     {
       "from": "Support",
